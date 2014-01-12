@@ -40,7 +40,8 @@
           <argument>
             <kind>1</kind>
             <string>type = 2;
-hspeed=1
+hsp = 1;
+isMoving = true;
 </string>
           </argument>
         </arguments>
@@ -65,10 +66,15 @@ hspeed=1
             <kind>1</kind>
             <string>
 switcher=instance_nearest(x,y,obj_platform_switcher)
-if(place_meeting(x+hspeed,y,switcher) and switcher.active=true){
-    hspeed = -hspeed
+if(place_meeting(x + hsp,y,switcher) and switcher.active=true){
+    if(hsp == -1)
+        hsp = 1;
+    else{
+        hsp = -1;
+    }
 }
 
+x+=hsp;
 </string>
           </argument>
         </arguments>

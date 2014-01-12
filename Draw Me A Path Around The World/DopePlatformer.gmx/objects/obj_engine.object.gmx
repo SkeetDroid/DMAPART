@@ -29,7 +29,7 @@
 tl_init(spr_smooth_mask,spr_shadow_mask,1.25,1024,768);
 
 //set the ambient illumination level
-tl_light_ambient(make_color_rgb(80,80,80)); // i like 88,88,88
+tl_light_ambient(make_color_rgb(255,255,255)); // i like 88,88,88
 
 
 //go to game room!

@@ -30,6 +30,13 @@ if((vCollide) != noone){
     }
 }
 
+//make players speed match platforms if standing on one
+if(place_meeting(x, y + 1, obj_platform)){
+    if(obj_platform.isMoving = true){
+        hsp = obj_platform.hsp;   
+    }
+}
+
 
 //check if the player is on the ground or not...we dont want gravity to effect the player standing on the ground
 if(place_meeting(x, y + 2, obj_blockPar)){ 
@@ -42,38 +49,19 @@ else if(!place_meeting(x, y + 2, obj_blockPar)){ // we have to set if the player
 //horizontal collision
 //same idea as the verticle collision, only using hsp instead of vsp
 if(place_meeting(x + hsp, y, obj_blockPar)){
-/* OLD HORIZONTAL COLLISION
-    if(hsp < 0){
-        move_contact_all(180,0);
-        
-        old walljump code
-        if(onGround = false)
-            wallSlide = true;
-        
+    yplus = 0;
+    //this iterates through the yplus var and looks a maximum of 5 pixels above the player
+    //in order to see if there is a free spot.
+    while (place_meeting(x + hsp, y - yplus, obj_blockPar) && yplus <= abs(8)) yplus += 1;
+    //if there is no free position found above then just do regular collision...
+    if (place_meeting(x + hsp, y - yplus, obj_blockPar)){
+        while(!place_meeting(x + sign(hsp), y, obj_blockPar)) x +=sign(hsp);
+        hsp = 0;
     }
-    if(hsp > 0){
-        move_contact_all(0,0);
-        
-        old walljump code
-        if(onGround = false)
-            wallSlide = true;
-        
+    else{
+        //but if we did find a free position then set the y to yplus
+        y -= yplus;
     }
-    hsp = 0;
-*/
-        yplus = 0;
-        //this iterates through the yplus var and looks a maximum of 5 pixels above the player
-        //in order to see if there is a free spot.
-        while (place_meeting(x + hsp, y - yplus, obj_blockPar) && yplus <= abs(8)) yplus += 1;
-        //if there is no free position found above then just do regular collision...
-        if (place_meeting(x + hsp, y - yplus, obj_blockPar)){
-            while(!place_meeting(x + sign(hsp), y, obj_blockPar)) x +=sign(hsp);
-            hsp = 0;
-        }
-        else{
-            //but if we did find a free position then set the y to yplus
-            y -= yplus;
-        }
 
 }
 /*
