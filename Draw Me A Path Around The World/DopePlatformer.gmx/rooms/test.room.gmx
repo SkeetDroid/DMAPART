@@ -201,6 +201,8 @@
     <instance objName="obj_60ish" x="449" y="571" name="inst_47CB2ABB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_60ish" x="506" y="571" name="inst_CFCB4C50" locked="0" code="" scaleX="-1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_drawer" x="156" y="60" name="inst_70E08DCA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_light_orange" x="224" y="608" name="inst_D2E105C0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_light_spot_follow" x="1070" y="558" name="inst_7F636BDC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
