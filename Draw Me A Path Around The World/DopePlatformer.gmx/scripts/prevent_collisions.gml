@@ -3,24 +3,31 @@ if(!onGround){ // if player is not (!) on the ground then apply gravity
 }
 
 //vertical collision
-if(place_meeting(x, y + vsp, obj_blockPar)){ // if there WILL BE a collision next frame...
-    if(vsp > 0){ // if player is falling down 
-        move_contact_all(270,0); // contact down then....
-    } // or if
-    if(vsp < 0){ // if player hits his head
-        move_contact_all(90,0); // contact block and then....
+var vCollide;
+vCollide = instance_place(x, y + vsp, obj_blockPar)
+if((vCollide) != noone){
+    if((vCollide).type == 1){ //if colliding with type "wall"
+        if(place_meeting(x, y + vsp, obj_blockPar)){ // if there WILL BE a collision next frame...
+            if(vsp > 0){ // if player is falling down 
+                move_contact_all(270,0); // contact down then....
+            } // or if
+            if(vsp < 0){ // if player hits his head
+                move_contact_all(90,0); // contact block and then....
+            }
+            vsp = 0; //fall/stop vertical movement
+        }
     }
-    vsp = 0; //fall/stop vertical movement
-}
-//vertical collision (platform)
-if(place_meeting(x, y + vsp, obj_platform)){ // if there WILL BE a collision next frame...
-    move_contact_all(270,0); // contact down then....
-    hsp += obj_platform.returnSpeed; // match players h speed with platoform's
-    onPlatform = true; //the player is most certianly standing on a platform, NOT to be confused with a block.
-    vsp = 0; //fall/stop vertical movement
-}
-else{
-    onPlatform = false;
+    
+    if((vCollide).type == 2 && sign(vsp) == 1){ // if colliding with platform type
+        if(!place_meeting(x,y,obj_blockPar)){
+            while(!place_meeting(x,y+sign(vsp),obj_blockPar))
+                y += 1;
+            vsp = 0;
+            onPlatform = true;
+        }
+    }else{
+        onPlatform = false;
+    }
 }
 
 

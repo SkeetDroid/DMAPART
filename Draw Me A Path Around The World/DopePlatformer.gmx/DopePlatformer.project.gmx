@@ -45,7 +45,6 @@
     <object>objects\obj_block</object>
     <object>objects\obj_blockPar</object>
     <object>objects\obj_player</object>
-    <object>objects\obj_platform_old</object>
     <object>objects\obj_platform</object>
     <object>objects\obj_engine</object>
     <object>objects\obj_spikes</object>
@@ -65,6 +64,7 @@
     <object>objects\obj_60ish</object>
     <object>objects\obj_drawing</object>
     <object>objects\obj_drawer</object>
+    <object>objects\platform_switcher</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_creation</room>
