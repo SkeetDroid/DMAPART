@@ -11,20 +11,6 @@
     <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
-        <id>604</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_inherited</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
         <id>603</id>
         <kind>7</kind>
         <userelative>0</userelative>
@@ -40,8 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>type = 2;
-hsp = 1;
+hsp = 0;
 isMoving = true;
+right = true;
 </string>
           </argument>
         </arguments>
@@ -67,12 +54,16 @@ isMoving = true;
             <string>
 switcher=instance_nearest(x,y,obj_platform_switcher)
 if(place_meeting(x + hsp,y,switcher) and switcher.active=true){
-    if(hsp == -1)
-        hsp = 1;
-    else{
-        hsp = -1;
-    }
+    if(right = true)
+        right = false;
+    else
+        right = true;
 }
+
+if(right)
+    hsp = -1;
+else
+    hsp = 1;
 
 x+=hsp;
 </string>
