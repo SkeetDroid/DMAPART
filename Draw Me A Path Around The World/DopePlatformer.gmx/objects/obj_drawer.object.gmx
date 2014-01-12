@@ -35,8 +35,8 @@ else
     {
     x=obj_player.x
     y=obj_player.y+10
-    hspeed=obj_player.hspeed
-    vspeed=obj_player.vspeed
+    hspeed=obj_player.hsp
+    vspeed=obj_player.vsp
     }
     
 </string>
