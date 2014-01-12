@@ -116,8 +116,8 @@
     <instance objName="obj_light_orange" x="224" y="608" name="inst_D2E105C0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_light_spot_follow" x="1070" y="558" name="inst_7F636BDC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_platform" x="512" y="672" name="inst_A17864CC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="platform_switcher" x="479" y="667" name="inst_DB7C1380" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="platform_switcher" x="760" y="669" name="inst_6CFB70BA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_switcher" x="479" y="667" name="inst_DB7C1380" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_switcher" x="760" y="669" name="inst_6CFB70BA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
