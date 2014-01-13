@@ -29,6 +29,8 @@
     {
     x+=gamepad_axis_value(0,gp_axisrh)*6
     y+=gamepad_axis_value(0,gp_axisrv)*6
+    hspeed=0
+    vspeed=0
     instance_create(x,y,obj_drawing)
     }
 else
