@@ -30,6 +30,7 @@ hsp = 0; // horizontal speed
 onGround = false; // is the player on the ground, or not? (in air)
 onPlatform = false;
 wall = false; // is the player touching a wall?
+gamepad=false;
 //wallSlide = false; // is the player wall SLIDING?
 //wallJumpPenalty = 0; // the number of frames the players movement will be affected from wall jumping (to prevent easy wall climbing)
 G = .5; // graviti 
@@ -44,6 +45,8 @@ tl_mesh_move(playermesh,x,y);
 
 //set the the hybrid system for this mesh
 tl_mesh_hybrid(playermesh,id);
+
+
 </string>
           </argument>
         </arguments>
@@ -86,7 +89,27 @@ vis = tl_get_lighting(x,y);
 tl_mesh_move(playermesh,x,y);
 
 
-
+//If gamepad is used, enable it.
+if gamepad_axis_value(0,gp_axislh)&gt;0.2 or
+gamepad_axis_value(0,gp_axislh)&lt;-0.2 or
+gamepad_axis_value(0,gp_axisrh)&gt;0.2 or
+gamepad_axis_value(0,gp_axisrh)&lt;-0.2 or
+gamepad_button_check(0,gp_face1) or
+gamepad_button_check(0,gp_face2) or
+gamepad_button_check(0,gp_face3) or
+gamepad_button_check(0,gp_face4) or
+gamepad_button_check(0,gp_padd) or
+gamepad_button_check(0,gp_padr) or
+gamepad_button_check(0,gp_padl) or
+gamepad_button_check(0,gp_shoulderrb) or
+gamepad_button_check(0,gp_shoulderr) or
+gamepad_button_check(0,gp_shoulderlb) or
+gamepad_button_check(0,gp_shoulderl) or
+gamepad_button_check(0,gp_select) or
+gamepad_button_check(0,gp_start) or
+gamepad_button_check(0,gp_stickl) or
+gamepad_button_check(0,gp_stickr)
+{gamepad=true}
 </string>
           </argument>
         </arguments>

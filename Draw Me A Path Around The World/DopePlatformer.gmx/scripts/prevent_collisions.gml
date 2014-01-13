@@ -30,12 +30,6 @@ if((vCollide) != noone){
     }
 }
 
-//make players speed match platforms if standing on one
-if(place_meeting(x, y + 1, obj_platform)){
-    if(obj_platform.isMoving = true){
-        hsp = obj_platform.hsp;   
-    }
-}
 
 
 //check if the player is on the ground or not...we dont want gravity to effect the player standing on the ground
@@ -70,3 +64,10 @@ else{// if NOT meeting a wall next frame...
     wallSlide = false;
 }
 */
+
+//make players speed match platforms if standing on one
+if(place_meeting(x, y + 1, obj_platform)){ platform=instance_nearest(x,y,obj_platform)
+    if(platform.isMoving = true){
+        hsp = platform.hsp;   
+    }
+}

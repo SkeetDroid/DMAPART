@@ -1,7 +1,10 @@
 //left - right movement
-if(keyboard_check(vk_left) || gamepad_axis_value(0,gp_axislh)<-0.2){
+if(keyboard_check(vk_left) || gamepad_axis_value(0,gp_axislh)<-0.4){
     if(onGround || !onGround)
         //hsp += -0.4; // += and not = because i want the player to gradualy accelerate
+        if gamepad=true
+        hsp=gamepad_axis_value(0,gp_axislh)*4
+        else
         hsp += -0.4;
     if(onPlatform)
         hsp = -4;
@@ -17,9 +20,12 @@ if(keyboard_check(vk_left) || gamepad_axis_value(0,gp_axislh)<-0.2){
     }
     */
 }
-if(keyboard_check(vk_right) || gamepad_axis_value(0,gp_axislh)>0.2){
+if(keyboard_check(vk_right) || gamepad_axis_value(0,gp_axislh)>0.4){
     if(onGround || !onGround)
         //hsp += 0.4;
+        if gamepad=true
+        hsp=gamepad_axis_value(0,gp_axislh)*4
+        else
         hsp += 0.4;
     if(onPlatform)
         hsp = 4;
@@ -37,7 +43,7 @@ if(keyboard_check(vk_right) || gamepad_axis_value(0,gp_axislh)>0.2){
 }
 
 //stop moving the player if the left/right keys arent pressed
-if(!keyboard_check(vk_left) && !keyboard_check(vk_right)) && (gamepad_axis_value(0,gp_axislh)<0.2 && gamepad_axis_value(0,gp_axislh)>-0.2) {
+if(!keyboard_check(vk_left) && !keyboard_check(vk_right)) && (gamepad_axis_value(0,gp_axislh)<0.4 && gamepad_axis_value(0,gp_axislh)>-0.4) {
     // if(onGround || onPlatform) we ALWAYS want the player to stop moving when no keys are pressed
         //hsp -= sign( hsp ) * min( abs( hsp ), .4 ); // tween players speed down to zero, smooothe like
         hsp = 0;
