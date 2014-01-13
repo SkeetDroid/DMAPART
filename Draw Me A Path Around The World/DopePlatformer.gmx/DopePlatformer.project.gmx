@@ -29,6 +29,8 @@
     <sprite>sprites\spr_aim_line</sprite>
     <sprite>sprites\spr_bomb</sprite>
     <sprite>sprites\spr_explosion</sprite>
+    <sprite>sprites\spr_drew</sprite>
+    <sprite>sprites\paint_brush</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background</background>
@@ -42,6 +44,7 @@
     <script>scripts\prevent_collisions.gml</script>
     <script>scripts\handle_input.gml</script>
     <script>scripts\handle_items.gml</script>
+    <script>scripts\handle_animation.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\BITFONT</font>
