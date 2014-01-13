@@ -71,6 +71,6 @@ else{// if NOT meeting a wall next frame...
 //make players speed match platforms if standing on one
 if(place_meeting(x, y + 1, obj_platform)){ platform=instance_nearest(x,y,obj_platform)
     if(platform.isMoving = true){
-        hsp = platform.hsp;   
+        hsp = platform.hsp + hsp;   
     }
 }
