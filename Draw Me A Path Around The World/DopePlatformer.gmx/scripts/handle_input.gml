@@ -50,6 +50,7 @@ if(!keyboard_check(vk_left) && !keyboard_check(vk_right)) && (gamepad_axis_value
 }
 
 //jump code
+if leadboots=false {
 if(keyboard_check_pressed(vk_up) || gamepad_button_check(0,gp_face1)){
     // we check for wall jumps before regular jump to avoid problems...to see what i mean
     //put both wall jump checks after the onground check.
@@ -92,8 +93,12 @@ if(keyboard_check_released(vk_up) || gamepad_button_check_released(0,gp_face1)){
         vsp -= sign( vsp ) * min( abs( vsp ), 3.0 ) // tween the value down to 0 niceley
     }
 }
+}
 
 //restart the game if space key is pressed
 if(keyboard_check_pressed(vk_space)){
     game_restart();
 }
+
+
+

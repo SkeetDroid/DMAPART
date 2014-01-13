@@ -1,4 +1,7 @@
 if(!onGround){ // if player is not (!) on the ground then apply gravity
+    if leadboots=true
+    vsp += G*4;
+    else
     vsp += G;
 }
 

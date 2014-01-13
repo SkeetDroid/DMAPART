@@ -46,7 +46,19 @@ tl_mesh_move(playermesh,x,y);
 //set the the hybrid system for this mesh
 tl_mesh_hybrid(playermesh,id);
 
-
+angle=0
+aiming=false
+helditem=1
+items[1]="Lead Boots"
+items[2]="Magic Hourglass"
+items[3]="Voodoo Wand"
+items[4]="Bomb"
+items[5]="Fire Brush"
+items[6]="Ice Brush"
+items[7]="Rubber Chicken"
+leadboots=false
+voodoo=false
+candraw=true
 </string>
           </argument>
         </arguments>
@@ -77,9 +89,10 @@ if(wallJumpPenalty &gt; 0){
 */
 
 handle_input();
+handle_items()
 prevent_collisions();
 
-x += hsp;
+if leadboots=true x += hsp/4 else x += hsp;
 y += vsp;
 
 //get players visibility
@@ -110,47 +123,10 @@ gamepad_button_check(0,gp_start) or
 gamepad_button_check(0,gp_stickl) or
 gamepad_button_check(0,gp_stickr)
 {gamepad=true}
+
+constainMovement()
+
 </string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>601</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_execute_script</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>9</kind>
-            <script>constainMovement</script>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
           </argument>
         </arguments>
       </action>
@@ -180,6 +156,39 @@ draw_text(100,125," OnGround: " + string(onGround));
 draw_text(100,150," onPlatform: " + string(onPlatform));
 draw_text(100,200, "hsp: " + string(hsp));
 draw_text(100,225, "vsp: " + string(vsp));
+draw_text(100,250, "Aiming: "+string(aiming))
+draw_text(100,275, "Aiming Angle: "+string(angle))
+draw_text(100,300, "Held Item: "+string(items[helditem]))
+draw_text(100,325, "Lead Boots Enabled: "+string(leadboots))
+draw_text(100,350, "Magic Hourglass Enabled: INDEV")
+draw_text(100,375, "Voodoo Wand Enabled: "+string(voodoo))
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_self()
+if aiming=true
+draw_sprite_ext(spr_aim_line,0,x,y-32,1,1,angle,c_white,1)
 </string>
           </argument>
         </arguments>
