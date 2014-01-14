@@ -104,6 +104,7 @@ tl_mesh_move(playermesh,x,y);
 
 
 //If gamepad is used, enable it.
+if gamepad=false
 if gamepad_axis_value(0,gp_axislh)&gt;0.2 or
 gamepad_axis_value(0,gp_axislh)&lt;-0.2 or
 gamepad_axis_value(0,gp_axisrh)&gt;0.2 or
@@ -124,6 +125,16 @@ gamepad_button_check(0,gp_start) or
 gamepad_button_check(0,gp_stickl) or
 gamepad_button_check(0,gp_stickr)
 {gamepad=true}
+
+//If gamepad is enabled and keyboard is used, disable it.
+if gamepad=true
+if keyboard_check(ord("W")) or
+keyboard_check(ord("A")) or
+keyboard_check(ord("D")) or
+keyboard_check(ord("Q")) or
+mouse_check_button(mb_left) or
+mouse_check_button(mb_right)
+{gamepad=false}
 
 constainMovement()
 
@@ -151,8 +162,10 @@ constainMovement()
             <kind>1</kind>
             <string>visState = "";
 draw_set_color(c_white);
+draw_text(100,25, "FPS: " + string(round(fps_real)));
+draw_text(100,50,"Instances: " + string(instance_number(all)));
 draw_text(100,100, "Visibility: " + string(vis));
-draw_text(100,125," OnGround: " + string(onGround));
+draw_text(100,125,"OnGround: " + string(onGround));
 //draw_text(100,150," WallSliding: " + string(wallSlide));
 draw_text(100,150," onPlatform: " + string(onPlatform));
 draw_text(100,200, "hsp: " + string(hsp));
