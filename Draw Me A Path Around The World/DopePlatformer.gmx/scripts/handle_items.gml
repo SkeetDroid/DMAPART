@@ -56,12 +56,16 @@ if gamepad_button_check_released(0,gp_shoulderlb) and aiming=true {//Throw item
     }
     
 if gamepad_button_check(0,gp_shoulderlb) and aiming=true { //Fire
-    if helditem=5 {//Fire Brush
-        fire=instance_create(x,y-32,obj_fire_ball)
-        fire.direction=angle
-        fire.speed=16
+    if gamepad_axis_value(0,gp_axisrh)>0.4 or gamepad_axis_value(0,gp_axisrh)<-0.4 
+        or gamepad_axis_value(0,gp_axisrv)>0.4 or gamepad_axis_value(0,gp_axisrv)<-0.4 {
+            if helditem=5 {//Fire Brush
+                spread=floor(random(10))-5
+                fire=instance_create(x,y-32,obj_fire_ball)
+                fire.direction=angle+spread
+                fire.speed=10
+                }
+            }
         }
-    }
     
 if gamepad_button_check(0,gp_shoulderlb) { //Enable aiming
     if helditem=4 or helditem=5 or helditem=6 {
