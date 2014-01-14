@@ -28,9 +28,16 @@
     <sprite>sprites\spr_drawing_reticle</sprite>
     <sprite>sprites\spr_aim_line</sprite>
     <sprite>sprites\spr_bomb</sprite>
+    <sprite>sprites\spr_fireball</sprite>
     <sprite>sprites\spr_explosion</sprite>
     <sprite>sprites\spr_drew</sprite>
     <sprite>sprites\paint_brush</sprite>
+    <sprite>sprites\spr_water</sprite>
+    <sprite>sprites\spr_lava</sprite>
+    <sprite>sprites\spr_ice</sprite>
+    <sprite>sprites\spr_secret</sprite>
+    <sprite>sprites\spr_rock_block</sprite>
+    <sprite>sprites\spr_ice_shard</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background</background>
@@ -74,7 +81,14 @@
     <object>objects\obj_drawer</object>
     <object>objects\obj_platform_switcher</object>
     <object>objects\obj_bomb</object>
+    <object>objects\obj_fire_ball</object>
+    <object>objects\obj_ice_shard</object>
     <object>objects\obj_explosion</object>
+    <object>objects\obj_water</object>
+    <object>objects\obj_lava</object>
+    <object>objects\obj_secret</object>
+    <object>objects\obj_rock</object>
+    <object>objects\obj_ice</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_creation</room>

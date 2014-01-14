@@ -47,6 +47,20 @@ if gamepad_button_check_released(0,gp_shoulderlb) and aiming=true {//Throw item
         bomb.speed=10
         }
     aiming=false
+    if helditem=6 {//Ice Brush
+        ice=instance_create(x,y-32,obj_ice_shard)
+        ice.direction=angle
+        ice.speed=16
+        }
+    aiming=false
+    }
+    
+if gamepad_button_check(0,gp_shoulderlb) and aiming=true { //Fire
+    if helditem=5 {//Fire Brush
+        fire=instance_create(x,y-32,obj_fire_ball)
+        fire.direction=angle
+        fire.speed=16
+        }
     }
     
 if gamepad_button_check(0,gp_shoulderlb) { //Enable aiming
@@ -64,9 +78,6 @@ if aiming=true {
     if gamepad_axis_value(0,gp_axisrh)>0.4 or gamepad_axis_value(0,gp_axisrh)<-0.4 or gamepad_axis_value(0,gp_axisrv)>0.4 or gamepad_axis_value(0,gp_axisrv)<-0.4 { //Get Shot angle
         angle=point_direction(x,y-32,x+gamepad_axis_value(0,gp_axisrh)*256,y+gamepad_axis_value(0,gp_axisrv)*256)
         }
-        else {
-        angle=0
-        }
     }
     
 if aiming=true { //Don't allow drawing until right stick is reset to center (Prevents accidentally using paint)
@@ -76,10 +87,15 @@ else if gamepad_axis_value(0,gp_axisrh)<0.4 and gamepad_axis_value(0,gp_axisrh)>
     candraw=true
     }
 
-
-
-
-
+//Water and Lava Floating
+if leadboots=false and place_meeting(x,y,obj_water) {
+    if vsp>-2
+    vsp-=2
+    }
+if leadboots=false and place_meeting(x,y,obj_lava) {
+    if vsp>-2
+    vsp-=2
+    }
 
 
 
