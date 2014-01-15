@@ -42,21 +42,6 @@
             <string>//create mesh variables
 //creating static mesh ( pseudo-circle, 10 vertex )
 type = 1;
-
-wallmesh=tl_mesh_create_from_sprite(sprite_index, true);
-tl_mesh_scale(wallmesh, image_xscale, image_yscale);
-
-//moving mesh at instance position
-tl_mesh_move(wallmesh,x + 16,y + 16);
-
-//set the the hybrid system for this mesh
-tl_mesh_hybrid(wallmesh,id);
-
-//create a sprite using my sprite,this instance cannot move!
-tl_shadowsprite(id);
-
-//set the shadow intensity to 0.9
-tl_shadowsprite_intensity(id,0.9);
 </string>
           </argument>
         </arguments>
