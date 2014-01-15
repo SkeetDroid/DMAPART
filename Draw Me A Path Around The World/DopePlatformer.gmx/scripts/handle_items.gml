@@ -1,7 +1,7 @@
 //Good luck decipering this.....
 
 //Items
-if (keyboard_check_pressed(ord("Q")) or gamepad_button_check_pressed(0,gp_shoulderl)) { //Change Helditem
+if (keyboard_check_pressed(item_switch_key) or gamepad_button_check_pressed(controllerIndex,gp_shoulderl)) { //Change Helditem
     if helditem<7 {
         helditem+=1
         }
@@ -10,7 +10,7 @@ if (keyboard_check_pressed(ord("Q")) or gamepad_button_check_pressed(0,gp_should
         }
     }
     
-if (mouse_check_button_pressed(mb_right) or gamepad_button_check_pressed(0,gp_shoulderlb)) { //Use Item
+if (keyboard_check_pressed(item_use_key) or gamepad_button_check_pressed(controllerIndex,gp_shoulderlb)) { //Use Item
     if helditem=1 { //Leadboots
         if leadboots=false
         leadboots=true
@@ -40,7 +40,7 @@ else {
     image_yscale=1
     }
     
-if gamepad_button_check_released(0,gp_shoulderlb) or mouse_check_button_released(mb_right) {//Throw item
+if gamepad_button_check_released(controllerIndex,gp_shoulderlb) or keyboard_check_released(item_use_key) {//Throw item
     if aiming=true {
     if helditem=4 {//Throw Bomb
         bomb=instance_create(x,y-32,obj_bomb)
@@ -57,9 +57,9 @@ if gamepad_button_check_released(0,gp_shoulderlb) or mouse_check_button_released
     }
 }
     
-if gamepad_button_check(0,gp_shoulderlb) or mouse_check_button(mb_right) if aiming=true { //Fire
-    if gamepad_axis_value(0,gp_axisrh)>0.4 or gamepad_axis_value(0,gp_axisrh)<-0.4 
-        or gamepad_axis_value(0,gp_axisrv)>0.4 or gamepad_axis_value(0,gp_axisrv)<-0.4 
+if gamepad_button_check(controllerIndex,gp_shoulderlb) or keyboard_check(item_use_key) if aiming=true { //Fire
+    if gamepad_axis_value(controllerIndex,gp_axisrh)>0.4 or gamepad_axis_value(controllerIndex,gp_axisrh)<-0.4 
+        or gamepad_axis_value(controllerIndex,gp_axisrv)>0.4 or gamepad_axis_value(controllerIndex,gp_axisrv)<-0.4 
         or gamepad = false{
             if helditem=5 {//Fire Brush
                 spread=floor(random(10))-5
@@ -70,10 +70,10 @@ if gamepad_button_check(0,gp_shoulderlb) or mouse_check_button(mb_right) if aimi
             }
         }
     
-if gamepad_button_check(0,gp_shoulderlb) or mouse_check_button(mb_right) { //Enable aiming
+if gamepad_button_check(controllerIndex,gp_shoulderlb) or keyboard_check(item_use_key) { //Enable aiming
     if helditem=4 or helditem=5 or helditem=6 {
-        if gamepad_axis_value(0,gp_axisrh)<0.4 or gamepad_axis_value(0,gp_axisrh)>-0.4 or gamepad=false {
-            if gamepad_axis_value(0,gp_axisrv)<0.4 or gamepad_axis_value(0,gp_axisrv)>-0.4 or gamepad=false {
+        if gamepad_axis_value(controllerIndex,gp_axisrh)<0.4 or gamepad_axis_value(controllerIndex,gp_axisrh)>-0.4 or global.gamepad=false {
+            if gamepad_axis_value(controllerIndex,gp_axisrv)<0.4 or gamepad_axis_value(controllerIndex,gp_axisrv)>-0.4 or global.gamepad=false {
             aiming=true
             }
         }
@@ -82,18 +82,18 @@ if gamepad_button_check(0,gp_shoulderlb) or mouse_check_button(mb_right) { //Ena
 else aiming=false
 
 if aiming=true { 
-    if gamepad_axis_value(0,gp_axisrh)>0.4 or gamepad_axis_value(0,gp_axisrh)<-0.4 or gamepad_axis_value(0,gp_axisrv)>0.4 or gamepad_axis_value(0,gp_axisrv)<-0.4 and gamepad=true { //Get Shot angle
-        angle=point_direction(x,y-32,x+gamepad_axis_value(0,gp_axisrh)*256,y+gamepad_axis_value(0,gp_axisrv)*256)}
-        else if gamepad=false {angle=point_direction(x,y-32,mouse_x,mouse_y)}
+    if gamepad_axis_value(controllerIndex,gp_axisrh)>0.4 or gamepad_axis_value(controllerIndex,gp_axisrh)<-0.4 or gamepad_axis_value(controllerIndex,gp_axisrv)>0.4 or gamepad_axis_value(controllerIndex,gp_axisrv)<-0.4 and global.gamepad=true { //Get Shot angle
+        angle=point_direction(x,y-32,x+gamepad_axis_value(controllerIndex,gp_axisrh)*256,y+gamepad_axis_value(controllerIndex,gp_axisrv)*256)}
+        else if global.gamepad=false {angle=point_direction(x,y-32,mouse_x,mouse_y)}
         }
     
 if aiming=true { //Don't allow drawing until right stick is reset to center (Prevents accidentally using paint)
     candraw=false
     }
-else if gamepad_axis_value(0,gp_axisrh)<0.4 and gamepad_axis_value(0,gp_axisrh)>-0.4 and gamepad_axis_value(0,gp_axisrv)<0.4 and gamepad_axis_value(0,gp_axisrv)>-0.4 { 
+else if gamepad_axis_value(controllerIndex,gp_axisrh)<0.4 and gamepad_axis_value(controllerIndex,gp_axisrh)>-0.4 and gamepad_axis_value(controllerIndex,gp_axisrv)<0.4 and gamepad_axis_value(controllerIndex,gp_axisrv)>-0.4 { 
     candraw=true
     }
-if gamepad=false and aiming=false {
+if global.gamepad=false and aiming=false {
     candraw=true
 }
 

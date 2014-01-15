@@ -58,7 +58,7 @@ display = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if( point_distance(X, Y, obj_player.x, obj_player.y) &lt; triggerDistance ){
+            <string>if( point_distance(X, Y, obj_playerPar.x, obj_playerPar.y) &lt; triggerDistance ){
     display = true;
 }
 else{

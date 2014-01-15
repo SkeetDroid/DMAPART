@@ -1,11 +1,10 @@
-index = argument0;
 
 //left - right movement
-if(keyboard_check(ord("A")) || gamepad_axis_value(index,gp_axislh)<-0.4){
+if(keyboard_check(left_key) || gamepad_axis_value(controllerIndex,gp_axislh)<-0.4){
     if(onGround || !onGround)
         //hsp += -0.4; // += and not = because i want the player to gradualy accelerate
-        if gamepad=true
-        hsp=gamepad_axis_value(index,gp_axislh)*4
+        if global.gamepad=true
+        hsp=gamepad_axis_value(controllerIndex,gp_axislh)*4
         else
         hsp += -0.4;
     if(onPlatform)
@@ -22,11 +21,11 @@ if(keyboard_check(ord("A")) || gamepad_axis_value(index,gp_axislh)<-0.4){
     }
     */
 }
-if(keyboard_check(ord("D")) || gamepad_axis_value(index,gp_axislh)>0.4){
+if(keyboard_check(right_key) || gamepad_axis_value(controllerIndex,gp_axislh)>0.4){
     if(onGround || !onGround)
         //hsp += 0.4;
-        if gamepad=true
-        hsp=gamepad_axis_value(index,gp_axislh)*4
+        if global.gamepad=true
+        hsp=gamepad_axis_value(controllerIndex,gp_axislh)*4
         else
         hsp += 0.4;
     if(onPlatform)
@@ -45,7 +44,7 @@ if(keyboard_check(ord("D")) || gamepad_axis_value(index,gp_axislh)>0.4){
 }
 
 //stop moving the player if the left/right keys arent pressed
-if(!keyboard_check(ord("A")) && !keyboard_check(ord("D"))) && (gamepad_axis_value(index,gp_axislh)<0.4 && gamepad_axis_value(index,gp_axislh)>-0.4) {
+if(!keyboard_check(left_key) && !keyboard_check(right_key)) && (gamepad_axis_value(controllerIndex,gp_axislh)<0.4 && gamepad_axis_value(controllerIndex,gp_axislh)>-0.4) {
     // if(onGround || onPlatform) we ALWAYS want the player to stop moving when no keys are pressed
         //hsp -= sign( hsp ) * min( abs( hsp ), .4 ); // tween players speed down to zero, smooothe like
         hsp = 0;
@@ -53,7 +52,7 @@ if(!keyboard_check(ord("A")) && !keyboard_check(ord("D"))) && (gamepad_axis_valu
 
 //jump code
 if leadboots=false {
-if(keyboard_check_pressed(ord("W")) || gamepad_button_check(index,gp_face1)){
+if(keyboard_check_pressed(up_key) || gamepad_button_check(controllerIndex,gp_face1)){
     // we check for wall jumps before regular jump to avoid problems...to see what i mean
     //put both wall jump checks after the onground check.
     /*
@@ -90,7 +89,7 @@ if(keyboard_check_pressed(ord("W")) || gamepad_button_check(index,gp_face1)){
     */
 }
 //jump release code
-if(keyboard_check_released(ord("W")) || gamepad_button_check_released(index,gp_face1)){
+if(keyboard_check_released(up_key) || gamepad_button_check_released(controllerIndex,gp_face1)){
     if !onGround {
         vsp -= sign( vsp ) * min( abs( vsp ), 3.0 ) // tween the value down to 0 niceley
     }

@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if gamepad_axis_value(0,gp_axisrh)&gt;0.2 || gamepad_axis_value(0,gp_axisrh)&lt;-0.2 || gamepad_axis_value(0,gp_axisrv)&gt;0.2 || gamepad_axis_value(0,gp_axisrv)&lt;-0.2 {
+            <string>/*
+if gamepad_axis_value(0,gp_axisrh)&gt;0.2 || gamepad_axis_value(0,gp_axisrh)&lt;-0.2 || gamepad_axis_value(0,gp_axisrv)&gt;0.2 || gamepad_axis_value(0,gp_axisrv)&lt;-0.2 {
     if obj_player.aiming=false and obj_player.candraw=true {
         x+=gamepad_axis_value(0,gp_axisrh)*6
         y+=gamepad_axis_value(0,gp_axisrv)*6
@@ -37,10 +38,10 @@
 else {
     x=obj_player.x
     y=obj_player.y+10
-    hspeed=obj_player.hsp
-    vspeed=obj_player.vsp
+    hspeed=obj_playerPar.hsp
+    vspeed=obj_playerPar.vsp
     }
-    
+    */
 </string>
           </argument>
         </arguments>
