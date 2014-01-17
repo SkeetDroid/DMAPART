@@ -39,6 +39,7 @@
     <sprite>sprites\spr_secret</sprite>
     <sprite>sprites\spr_rock_block</sprite>
     <sprite>sprites\spr_ice_shard</sprite>
+    <sprite>sprites\sprite31</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background</background>
