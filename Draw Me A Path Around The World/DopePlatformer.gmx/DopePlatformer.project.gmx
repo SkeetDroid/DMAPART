@@ -40,6 +40,15 @@
     <sprite>sprites\spr_rock_block</sprite>
     <sprite>sprites\spr_ice_shard</sprite>
     <sprite>sprites\sprite31</sprite>
+    <sprite>sprites\spr_test_HUD</sprite>
+    <sprite>sprites\spr_enabled</sprite>
+    <sprite>sprites\spr_lead_boots</sprite>
+    <sprite>sprites\spr_magic_hourglass</sprite>
+    <sprite>sprites\spr_voodoo_wand</sprite>
+    <sprite>sprites\spr_bomb_hud</sprite>
+    <sprite>sprites\spr_fire_rod</sprite>
+    <sprite>sprites\spr_ice_rod</sprite>
+    <sprite>sprites\spr_rubber_chicken</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background</background>
@@ -73,7 +82,10 @@
     <object>objects\obj_45</object>
     <object>objects\obj_60ish</object>
     <object>objects\obj_drawing</object>
-    <object>objects\obj_drawer</object>
+    <object>objects\obj_drawer1</object>
+    <object>objects\obj_drawer2</object>
+    <object>objects\obj_drawer3</object>
+    <object>objects\obj_drawer4</object>
     <object>objects\obj_platform_switcher</object>
     <object>objects\obj_bomb</object>
     <object>objects\obj_fire_ball</object>

@@ -8,6 +8,37 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>hudbubble[0]=spr_rubber_chicken
+hudbubble[1]=spr_lead_boots
+hudbubble[2]=spr_magic_hourglass
+hudbubble[3]=spr_voodoo_wand
+hudbubble[4]=spr_bomb_hud
+hudbubble[5]=spr_fire_rod
+hudbubble[6]=spr_ice_rod
+hudbubble[7]=spr_rubber_chicken
+hudbubble[8]=spr_lead_boots
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="7" enumb="2">
       <action>
         <libid>1</libid>
@@ -26,6 +57,66 @@
           <argument>
             <kind>1</kind>
             <string>global.gamepad=false
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if instance_number(obj_player1)=1 {
+    draw_sprite_ext(spr_test_HUD,0,8,0,1,1,0,c_yellow,1)
+    draw_sprite_ext(hudbubble[obj_player1.helditem-1],0,8+8,1,0.5,0.5,0,c_white,1)
+    draw_sprite_ext(hudbubble[obj_player1.helditem+1],0,8+96,1,0.5,0.5,0,c_white,1)
+    draw_sprite_ext(hudbubble[obj_player1.helditem],0,8+40,1+8,1,1,0,c_white,1)
+    if obj_player1.helditem=1 and obj_player1.leadboots=true draw_sprite_ext(spr_enabled,0,8+40,1+8,1,1,0,c_white,1)
+    if obj_player1.helditem=3 and obj_player1.voodoo=true draw_sprite_ext(spr_enabled,0,8+40,1+8,1,1,0,c_white,1)
+}
+
+if instance_number(obj_player2)=1 {
+    draw_sprite_ext(spr_test_HUD,0,128+8+8,0,1,1,0,c_blue,1)
+    draw_sprite_ext(hudbubble[obj_player2.helditem-1],0,128+8+8+8,1,0.5,0.5,0,c_white,1)
+    draw_sprite_ext(hudbubble[obj_player2.helditem+1],0,128+8+8+96,1,0.5,0.5,0,c_white,1)
+    draw_sprite_ext(hudbubble[obj_player2.helditem],0,128+8+8+40,1+8,1,1,0,c_white,1)
+    if obj_player2.helditem=1 and obj_player2.leadboots=true draw_sprite_ext(spr_enabled,0,128+8+8+40,1+8,1,1,0,c_white,1)
+    if obj_player2.helditem=3 and obj_player2.voodoo=true draw_sprite_ext(spr_enabled,0,128+8+8+40,1+8,1,1,0,c_white,1)
+}
+
+if instance_number(obj_player3)=1 {
+    draw_sprite_ext(spr_test_HUD,0,128+128+8+8+8,0,1,1,0,c_green,1)
+    draw_sprite_ext(hudbubble[obj_player3.helditem-1],0,128+128+8+8+8+8,1,0.5,0.5,0,c_white,1)
+    draw_sprite_ext(hudbubble[obj_player3.helditem+1],0,128+128+8+8+8+96,1,0.5,0.5,0,c_white,1)
+    draw_sprite_ext(hudbubble[obj_player3.helditem],0,128+128+8+8+8+40,1+8,1,1,0,c_white,1)
+    if obj_player3.helditem=1 and obj_player3.leadboots=true draw_sprite_ext(spr_enabled,0,128+128+8+8+8+40,1+8,1,1,0,c_white,1)
+    if obj_player3.helditem=3 and obj_player3.voodoo=true draw_sprite_ext(spr_enabled,0,128+128+8+8+8+40,1+8,1,1,0,c_white,1)
+}
+
+if instance_number(obj_player4)=1 {
+    draw_sprite_ext(spr_test_HUD,0,128+128+128+8+8+8+8,0,1,1,0,c_red,1)
+    draw_sprite_ext(hudbubble[obj_player4.helditem-1],0,128+128+128+8+8+8+8+8,1,0.5,0.5,0,c_white,1)
+    draw_sprite_ext(hudbubble[obj_player4.helditem+1],0,128+128+128+8+8+8+8+96,1,0.5,0.5,0,c_white,1)
+    draw_sprite_ext(hudbubble[obj_player4.helditem],0,128+128+128+8+8+8+8+40,1+8,1,1,0,c_white,1)
+    if obj_player4.helditem=1 and obj_player4.leadboots=true draw_sprite_ext(spr_enabled,0,128+128+128+8+8+8+8+40,1+8,1,1,0,c_white,1)
+    if obj_player4.helditem=3 and obj_player4.voodoo=true draw_sprite_ext(spr_enabled,0,128+128+128+8+8+8+8+40,1+8,1,1,0,c_white,1)
+}
+
+
+
 </string>
           </argument>
         </arguments>

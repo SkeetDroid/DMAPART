@@ -50,6 +50,7 @@ items[7]="Rubber Chicken"
 leadboots=false
 voodoo=false
 candraw=true
+dev=false
 
 //spawn other players if additional gamepads detected
 var gp_num = gamepad_get_device_count();
@@ -143,25 +144,25 @@ gamepad_button_check(0,gp_stickr)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-visState = "";
-draw_set_color(color);
-//draw_text(x_draw,25+y_draw, "FPS: " + string(round(fps_real)));
-//draw_text(x_draw,50+y_draw,"Instances: " + string(instance_number(all)));
-draw_text(x_draw,100+y_draw, "Visibility: " + string(vis));
-draw_text(x_draw,125+y_draw,"OnGround: " + string(onGround));
-//draw_text(100,150," WallSliding: " + string(wallSlide));
-draw_text(x_draw,150+y_draw," onPlatform: " + string(onPlatform));
-draw_text(x_draw,200+y_draw, "hsp: " + string(hsp));
-draw_text(x_draw,225+y_draw, "vsp: " + string(vsp));
-draw_text(x_draw,250+y_draw, "Aiming: "+string(aiming))
-draw_text(x_draw,275+y_draw, "Aiming Angle: "+string(angle))
-draw_text(x_draw,300+y_draw, "Held Item: "+string(items[helditem]))
-draw_text(x_draw,325+y_draw, "Lead Boots Enabled: "+string(leadboots))
-draw_text(x_draw,350+y_draw, "Magic Hourglass Enabled: INDEV")
-draw_text(x_draw,375+y_draw, "Voodoo Wand Enabled: "+string(voodoo))
-
-
+            <string>if dev=true
+    {
+    visState = "";
+    draw_set_color(color);
+    //draw_text(x_draw,25+y_draw, "FPS: " + string(round(fps_real)));
+    //draw_text(x_draw,50+y_draw,"Instances: " + string(instance_number(all)));
+    draw_text(x_draw,100+y_draw, "Visibility: " + string(vis));
+    draw_text(x_draw,125+y_draw,"OnGround: " + string(onGround));
+    //draw_text(100,150," WallSliding: " + string(wallSlide));
+    draw_text(x_draw,150+y_draw," onPlatform: " + string(onPlatform));
+    draw_text(x_draw,200+y_draw, "hsp: " + string(hsp));
+    draw_text(x_draw,225+y_draw, "vsp: " + string(vsp));
+    draw_text(x_draw,250+y_draw, "Aiming: "+string(aiming))
+    draw_text(x_draw,275+y_draw, "Aiming Angle: "+string(angle))
+    draw_text(x_draw,300+y_draw, "Held Item: "+string(items[helditem]))
+    draw_text(x_draw,325+y_draw, "Lead Boots Enabled: "+string(leadboots))
+    draw_text(x_draw,350+y_draw, "Magic Hourglass Enabled: INDEV")
+    draw_text(x_draw,375+y_draw, "Voodoo Wand Enabled: "+string(voodoo))
+    }
 </string>
           </argument>
         </arguments>
@@ -187,6 +188,29 @@ draw_text(x_draw,375+y_draw, "Voodoo Wand Enabled: "+string(voodoo))
             <string>draw_self()
 if aiming=true
 draw_sprite_ext(spr_aim_line,0,x,y-32,1,1,angle,c_white,1)
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="123">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>dev=!dev
 </string>
           </argument>
         </arguments>

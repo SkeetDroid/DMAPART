@@ -1,12 +1,21 @@
 //Good luck decipering this.....
 
 //Items
-if (keyboard_check_pressed(item_switch_key) or gamepad_button_check_pressed(controllerIndex,gp_shoulderl)) { //Change Helditem
+if (keyboard_check_pressed(item_switch_key) or gamepad_button_check_pressed(controllerIndex,gp_shoulderr)) { //Change Helditem
     if helditem<7 {
         helditem+=1
         }
     else {
         helditem=1
+        }
+    }
+    
+if (keyboard_check_pressed(item_switch_key) or gamepad_button_check_pressed(controllerIndex,gp_shoulderl)) { //Change Helditem
+    if helditem>1 {
+        helditem-=1
+        }
+    else {
+        helditem=7
         }
     }
     
@@ -60,7 +69,7 @@ if gamepad_button_check_released(controllerIndex,gp_shoulderlb) or keyboard_chec
 if gamepad_button_check(controllerIndex,gp_shoulderlb) or keyboard_check(item_use_key) if aiming=true { //Fire
     if gamepad_axis_value(controllerIndex,gp_axisrh)>0.4 or gamepad_axis_value(controllerIndex,gp_axisrh)<-0.4 
         or gamepad_axis_value(controllerIndex,gp_axisrv)>0.4 or gamepad_axis_value(controllerIndex,gp_axisrv)<-0.4 
-        or gamepad = false{
+        or global.gamepad = false{
             if helditem=5 {//Fire Brush
                 spread=floor(random(10))-5
                 fire=instance_create(x,y-32,obj_fire_ball)
