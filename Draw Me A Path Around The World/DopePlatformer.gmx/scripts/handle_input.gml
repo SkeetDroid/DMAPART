@@ -70,7 +70,7 @@ if(keyboard_check_pressed(up_key) || gamepad_button_check(controllerIndex,gp_fac
     }
     */
     
-    if(onGround && place_empty( x, y - 2 )){
+    if(onGround && place_meeting( x, y - 2,obj_blockPar)=false){
         vsp = -9.5;
         onGround = false;
     }
