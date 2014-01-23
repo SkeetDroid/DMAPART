@@ -49,6 +49,15 @@
     <sprite>sprites\spr_fire_rod</sprite>
     <sprite>sprites\spr_ice_rod</sprite>
     <sprite>sprites\spr_rubber_chicken</sprite>
+    <sprite>sprites\spr_lock_block</sprite>
+    <sprite>sprites\spr_red_lock_block</sprite>
+    <sprite>sprites\spr_blue_lock_block</sprite>
+    <sprite>sprites\spr_key</sprite>
+    <sprite>sprites\spr_red_key</sprite>
+    <sprite>sprites\spr_blue_key</sprite>
+    <sprite>sprites\spr_half_key</sprite>
+    <sprite>sprites\spr_red_half_key</sprite>
+    <sprite>sprites\spr_blue_half_key</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background</background>
@@ -100,6 +109,18 @@
     <object>objects\obj_ice</object>
     <object>objects\obj_player</object>
     <object>objects\obj_controller</object>
+    <object>objects\obj_key</object>
+    <object>objects\obj_red_key</object>
+    <object>objects\obj_blue_key</object>
+    <object>objects\obj_lock</object>
+    <object>objects\obj_red_lock</object>
+    <object>objects\obj_blue_lock</object>
+    <object>objects\obj_key_fall</object>
+    <object>objects\obj_red_key_fall</object>
+    <object>objects\obj_blue_key_fall</object>
+    <object>objects\obj_lock_fall</object>
+    <object>objects\obj_red_lock_fall</object>
+    <object>objects\obj_blue_lock_fall</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\mock_lv</room>
