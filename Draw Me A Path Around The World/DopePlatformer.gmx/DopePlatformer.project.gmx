@@ -115,12 +115,16 @@
     <object>objects\obj_lock</object>
     <object>objects\obj_red_lock</object>
     <object>objects\obj_blue_lock</object>
-    <object>objects\obj_key_fall</object>
-    <object>objects\obj_red_key_fall</object>
-    <object>objects\obj_blue_key_fall</object>
-    <object>objects\obj_lock_fall</object>
-    <object>objects\obj_red_lock_fall</object>
-    <object>objects\obj_blue_lock_fall</object>
+    <objects name="Unplaced">
+      <object>objects\obj_fall_block_PAR</object>
+      <object>objects\obj_key_fall</object>
+      <object>objects\obj_red_key_fall</object>
+      <object>objects\obj_blue_key_fall</object>
+      <object>objects\obj_lock_fall</object>
+      <object>objects\obj_red_lock_fall</object>
+      <object>objects\obj_blue_lock_fall</object>
+      <object>objects\obj_rock_fall</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\mock_lv</room>

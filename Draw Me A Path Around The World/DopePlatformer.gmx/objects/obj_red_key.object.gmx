@@ -31,6 +31,8 @@ unlocking=false
 unlocked=false
 sway=0
 increasing=false
+startx=x
+starty=y
 </string>
           </argument>
         </arguments>
@@ -100,7 +102,7 @@ if distance_to_point(target.x+16,target.y+16)&lt;256 and distance_to_point(targe
 }
 else {
     unlocked=true
-    alarm[0]=random(180)
+    alarm[0]=random(180)+60
     sprite_index=spr_red_half_key 
     hspeed=0
     vspeed=0
@@ -111,6 +113,11 @@ else {
 }
 }
 }
+}
+
+if collector.canmove=false and unlocking=false {
+    instance_create(startx,starty,obj_red_key)
+    instance_destroy()
 }
 
 if increasing=true {
