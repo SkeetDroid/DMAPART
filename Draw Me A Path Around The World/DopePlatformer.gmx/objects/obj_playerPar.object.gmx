@@ -50,6 +50,7 @@ items[6]="Ice Brush"
 items[7]="Rubber Chicken"
 leadboots=false
 voodoo=false
+hourglass=false
 candraw=true
 dev=false
 fadingin=true

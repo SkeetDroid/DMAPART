@@ -40,7 +40,7 @@
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
   </backgrounds>
   <views>
-    <view visible="-1" objName="obj_playerPar" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="395" vborder="290" hspeed="11" vspeed="11"/>
+    <view visible="-1" objName="obj_camera" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="1024" vborder="768" hspeed="11" vspeed="11"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="640" hview="480" xport="0" yport="0" wport="640" hport="480" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="640" hview="480" xport="0" yport="0" wport="640" hport="480" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="640" hview="480" xport="0" yport="0" wport="640" hport="480" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
@@ -143,6 +143,12 @@
     <instance objName="obj_blue_lock" x="224" y="512" name="inst_E9F74AFC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_blue_lock" x="1568" y="448" name="inst_B091F729" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spikes" x="928" y="960" name="inst_6EE776F7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_block" x="608" y="800" name="inst_BC64A743" locked="0" code="" scaleX="4" scaleY="9" colour="4294967295" rotation="0"/>
+    <instance objName="obj_hidden_spikes" x="640" y="800" name="inst_52B6C454" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_hidden_spikes" x="672" y="800" name="inst_7277A0EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_hidden_spikes" x="704" y="800" name="inst_6A9F96B4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_hidden_spikes" x="608" y="800" name="inst_66DC8E29" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_camera" x="288" y="160" name="inst_8E6A61A7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="back_africa_tiles" x="320" y="512" w="32" h="32" xo="128" yo="0" id="10000006" name="inst_037402A4" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -814,6 +820,42 @@
     <tile bgName="back_africa_tiles" x="96" y="896" w="32" h="32" xo="0" yo="64" id="10001049" name="inst_DA58CE4B" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="back_africa_tiles" x="96" y="928" w="32" h="32" xo="0" yo="64" id="10001050" name="inst_991C5EC7" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="back_africa_tiles" x="64" y="928" w="32" h="32" xo="0" yo="64" id="10001051" name="inst_776A0F36" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="672" y="800" w="32" h="32" xo="64" yo="0" id="10001055" name="inst_6E6B9185" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="640" y="800" w="32" h="32" xo="64" yo="0" id="10001056" name="inst_85E59AFB" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="704" y="800" w="32" h="32" xo="96" yo="0" id="10001058" name="inst_A47313C1" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="608" y="800" w="32" h="32" xo="128" yo="0" id="10001059" name="inst_947479E6" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="608" y="1056" w="32" h="32" xo="32" yo="128" id="10001060" name="inst_37FE030A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="608" y="1024" w="32" h="32" xo="32" yo="128" id="10001061" name="inst_2CB14377" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="608" y="992" w="32" h="32" xo="32" yo="128" id="10001062" name="inst_93B118AA" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="608" y="960" w="32" h="32" xo="32" yo="128" id="10001063" name="inst_28457DC3" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="608" y="928" w="32" h="32" xo="32" yo="128" id="10001064" name="inst_A88707CC" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="608" y="896" w="32" h="32" xo="32" yo="128" id="10001065" name="inst_3731D1C5" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="608" y="864" w="32" h="32" xo="32" yo="128" id="10001066" name="inst_1BD619C8" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="608" y="832" w="32" h="32" xo="32" yo="128" id="10001067" name="inst_96DFEF17" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="704" y="832" w="32" h="32" xo="64" yo="128" id="10001068" name="inst_3213061E" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="704" y="864" w="32" h="32" xo="64" yo="128" id="10001069" name="inst_61EFA4D7" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="704" y="896" w="32" h="32" xo="64" yo="128" id="10001070" name="inst_9109D65F" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="704" y="928" w="32" h="32" xo="64" yo="128" id="10001071" name="inst_059C12BE" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="704" y="960" w="32" h="32" xo="64" yo="128" id="10001072" name="inst_BBDE5620" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="704" y="992" w="32" h="32" xo="64" yo="128" id="10001073" name="inst_CC88C733" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="704" y="1024" w="32" h="32" xo="64" yo="128" id="10001074" name="inst_4D8983F5" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="704" y="1056" w="32" h="32" xo="64" yo="128" id="10001075" name="inst_293A548A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="640" y="1056" w="32" h="32" xo="0" yo="64" id="10001076" name="inst_9E00748B" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="640" y="1024" w="32" h="32" xo="0" yo="64" id="10001077" name="inst_3AF86703" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="640" y="992" w="32" h="32" xo="0" yo="64" id="10001078" name="inst_EC10BC5D" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="640" y="960" w="32" h="32" xo="0" yo="64" id="10001079" name="inst_B237F9FF" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="640" y="928" w="32" h="32" xo="0" yo="64" id="10001080" name="inst_D7D8E2BB" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="640" y="896" w="32" h="32" xo="0" yo="64" id="10001081" name="inst_CE5A9FAB" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="640" y="864" w="32" h="32" xo="0" yo="64" id="10001082" name="inst_A2668788" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="640" y="832" w="32" h="32" xo="0" yo="64" id="10001083" name="inst_89630258" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="672" y="832" w="32" h="32" xo="0" yo="64" id="10001084" name="inst_63527E85" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="672" y="864" w="32" h="32" xo="0" yo="64" id="10001085" name="inst_CE108CE1" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="672" y="896" w="32" h="32" xo="0" yo="64" id="10001086" name="inst_A33623B3" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="672" y="928" w="32" h="32" xo="0" yo="64" id="10001087" name="inst_2175E4FF" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="672" y="960" w="32" h="32" xo="0" yo="64" id="10001088" name="inst_0F7408EB" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="672" y="992" w="32" h="32" xo="0" yo="64" id="10001089" name="inst_044C4A1C" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="672" y="1024" w="32" h="32" xo="0" yo="64" id="10001090" name="inst_420EFE16" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="672" y="1056" w="32" h="32" xo="0" yo="64" id="10001091" name="inst_EC42E5CE" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

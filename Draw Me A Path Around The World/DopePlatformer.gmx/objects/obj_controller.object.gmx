@@ -85,6 +85,7 @@ hudbubble[8]=spr_lead_boots
     draw_sprite_ext(hudbubble[obj_player1.helditem+1],0,8+96,1,0.5,0.5,0,c_white,1)
     draw_sprite_ext(hudbubble[obj_player1.helditem],0,8+40,1+8,1,1,0,c_white,1)
     if obj_player1.helditem=1 and obj_player1.leadboots=true draw_sprite_ext(spr_enabled,0,8+40,1+8,1,1,0,c_white,1)
+    if obj_player1.helditem=2 and obj_player1.hourglass=true draw_sprite_ext(spr_enabled,0,8+40,1+8,1,1,0,c_white,1)
     if obj_player1.helditem=3 and obj_player1.voodoo=true draw_sprite_ext(spr_enabled,0,8+40,1+8,1,1,0,c_white,1)
 }
 
@@ -94,6 +95,7 @@ if instance_number(obj_player2)=1 {
     draw_sprite_ext(hudbubble[obj_player2.helditem+1],0,128+8+8+96,1,0.5,0.5,0,c_white,1)
     draw_sprite_ext(hudbubble[obj_player2.helditem],0,128+8+8+40,1+8,1,1,0,c_white,1)
     if obj_player2.helditem=1 and obj_player2.leadboots=true draw_sprite_ext(spr_enabled,0,128+8+8+40,1+8,1,1,0,c_white,1)
+    if obj_player2.helditem=2 and obj_player2.hourglass=true draw_sprite_ext(spr_enabled,0,128+8+8+40,1+8,1,1,0,c_white,1)
     if obj_player2.helditem=3 and obj_player2.voodoo=true draw_sprite_ext(spr_enabled,0,128+8+8+40,1+8,1,1,0,c_white,1)
 }
 
@@ -103,6 +105,7 @@ if instance_number(obj_player3)=1 {
     draw_sprite_ext(hudbubble[obj_player3.helditem+1],0,128+128+8+8+8+96,1,0.5,0.5,0,c_white,1)
     draw_sprite_ext(hudbubble[obj_player3.helditem],0,128+128+8+8+8+40,1+8,1,1,0,c_white,1)
     if obj_player3.helditem=1 and obj_player3.leadboots=true draw_sprite_ext(spr_enabled,0,128+128+8+8+8+40,1+8,1,1,0,c_white,1)
+    if obj_player3.helditem=2 and obj_player3.hourglass=true draw_sprite_ext(spr_enabled,0,128+128+8+8+8+40,1+8,1,1,0,c_white,1)
     if obj_player3.helditem=3 and obj_player3.voodoo=true draw_sprite_ext(spr_enabled,0,128+128+8+8+8+40,1+8,1,1,0,c_white,1)
 }
 
@@ -112,6 +115,7 @@ if instance_number(obj_player4)=1 {
     draw_sprite_ext(hudbubble[obj_player4.helditem+1],0,128+128+128+8+8+8+8+96,1,0.5,0.5,0,c_white,1)
     draw_sprite_ext(hudbubble[obj_player4.helditem],0,128+128+128+8+8+8+8+40,1+8,1,1,0,c_white,1)
     if obj_player4.helditem=1 and obj_player4.leadboots=true draw_sprite_ext(spr_enabled,0,128+128+128+8+8+8+8+40,1+8,1,1,0,c_white,1)
+    if obj_player4.helditem=2 and obj_player4.hourglass=true draw_sprite_ext(spr_enabled,0,128+128+128+8+8+8+8+40,1+8,1,1,0,c_white,1)
     if obj_player4.helditem=3 and obj_player4.voodoo=true draw_sprite_ext(spr_enabled,0,128+128+128+8+8+8+8+40,1+8,1,1,0,c_white,1)
 }
 

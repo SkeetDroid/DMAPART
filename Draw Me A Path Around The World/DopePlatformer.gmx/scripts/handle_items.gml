@@ -26,6 +26,12 @@ if (keyboard_check_pressed(item_use_key) or gamepad_button_check_pressed(control
         else
         leadboots=false
         }
+    if helditem=2 { //Hourglass
+        if hourglass=false
+        hourglass=true
+        else
+        hourglass=false
+        }
     if helditem=3 { //Voodoo Wand
         if voodoo=false
         voodoo=true
