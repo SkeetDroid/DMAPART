@@ -95,7 +95,7 @@
     <object>objects\obj_message_displayer</object>
     <object>objects\obj_45</object>
     <object>objects\obj_60ish</object>
-    <object>objects\obj_drawing_filler</object>
+    <object>objects\obj_drawing</object>
     <object>objects\obj_drawer1</object>
     <object>objects\obj_drawer2</object>
     <object>objects\obj_drawer3</object>

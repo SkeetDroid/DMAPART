@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>scale=1
+lastdistancex=0
+lastdistancey=0
 </string>
           </argument>
         </arguments>
@@ -149,16 +151,25 @@ x=(highestx.x-lowestx.x)/2+lowestx.x
 y=(highesty.y-lowesty.y)/2+lowesty.y
 
 if (highestx.x-lowestx.x)&gt;view_wview-256 or (highesty.y-lowesty.y)&gt;view_hview-256 {
-    view_wview+=20
-    view_hview+=15
+    if lastdistancex&lt;(highestx.x-lowestx.x) or lastdistancex&lt;(highestx.y-lowestx.y) {
+    view_wview+=4
+    view_hview+=3
+    lastdistancex=(highestx.x-lowestx.x)
+    lastdistancey=(highesty.y-lowesty.y)
+    }
 }
 else if (highestx.x-lowestx.x)&lt;view_wview+128 or (highesty.y-lowesty.y)&lt;view_hview+128 {
     if view_wview&gt;1028 and view_hview&gt;768 {
-    view_wview-=20
-    view_hview-=15
+    if lastdistancex&gt;(highestx.x-lowestx.x) or lastdistancex&gt;(highestx.y-lowestx.y) {
+    view_wview-=4
+    view_hview-=3
+    lastdistancex=(highestx.x-lowestx.x)
+    lastdistancey=(highesty.y-lowesty.y)
+    }
     }
 }
-
+lastdistancex=(highestx.x-lowestx.x)
+lastdistancey=(highesty.y-lowesty.y)
 
 </string>
           </argument>
