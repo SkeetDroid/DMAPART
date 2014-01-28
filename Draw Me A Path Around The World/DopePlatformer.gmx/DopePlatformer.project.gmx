@@ -65,6 +65,7 @@
     <background>background\background</background>
     <background>background\spr_worksheet</background>
     <background>background\back_africa_tiles</background>
+    <background>background\back_sky</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path1</path>
