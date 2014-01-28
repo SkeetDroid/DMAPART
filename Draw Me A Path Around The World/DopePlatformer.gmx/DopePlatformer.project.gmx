@@ -59,6 +59,7 @@
     <sprite>sprites\spr_red_half_key</sprite>
     <sprite>sprites\spr_blue_half_key</sprite>
     <sprite>sprites\spr_camera</sprite>
+    <sprite>sprites\spr_drawing_filler</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background</background>
@@ -94,7 +95,7 @@
     <object>objects\obj_message_displayer</object>
     <object>objects\obj_45</object>
     <object>objects\obj_60ish</object>
-    <object>objects\obj_drawing</object>
+    <object>objects\obj_drawing_filler</object>
     <object>objects\obj_drawer1</object>
     <object>objects\obj_drawer2</object>
     <object>objects\obj_drawer3</object>
