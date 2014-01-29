@@ -88,7 +88,7 @@ if collected=true { //Move toward player
     }
     
 target=instance_nearest(x,y,obj_red_lock)
-if distance_to_point(target.x+16,target.y+16)&lt;256 {unlocking=true}
+if distance_to_point(target.x+16,target.y+16)&lt;64 {unlocking=true}
 
 if unlocking=true {
 image_angle=point_direction(x,y,target.x+16,target.y+16)
