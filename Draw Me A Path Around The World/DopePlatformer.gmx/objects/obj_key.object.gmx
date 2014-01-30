@@ -87,6 +87,10 @@ if collected=true { //Move toward player
     image_angle=-collector.hsp*8+270
     }
     
+if place_free(x,y+1) {
+    y+=1
+}
+    
 target=instance_nearest(x,y,obj_lock)
 if distance_to_point(target.x+16,target.y+16)&lt;64 {unlocking=true}
 

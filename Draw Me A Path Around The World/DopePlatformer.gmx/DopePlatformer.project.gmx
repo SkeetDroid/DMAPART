@@ -134,6 +134,7 @@
       <object>objects\obj_red_lock_fall</object>
       <object>objects\obj_blue_lock_fall</object>
       <object>objects\obj_rock_fall</object>
+      <object>objects\obj_ice_fall</object>
     </objects>
     <object>objects\obj_camera</object>
   </objects>

@@ -179,11 +179,11 @@ obj_player4.y&gt;=obj_player3.y {
 }
 
 
-x=(highestx.x-lowestx.x)/2+lowestx.x
-y=(highesty.y-lowesty.y)/2+lowesty.y
+x=round((highestx.x-lowestx.x)/2+lowestx.x)
+y=round((highesty.y-lowesty.y)/2+lowesty.y)
 
 if (highestx.x-lowestx.x)&gt;view_wview-512 or (highesty.y-lowesty.y)&gt;view_hview-512 {
-    if lastdistancex&lt;(highestx.x-lowestx.x) or lastdistancex&lt;(highestx.y-lowestx.y) {
+    if lastdistancex&lt;(highestx.x-lowestx.x) or lastdistancey&lt;(highesty.y-lowesty.y) {
     view_wview+=4
     view_hview+=3
     lastdistancex=(highestx.x-lowestx.x)
@@ -192,7 +192,7 @@ if (highestx.x-lowestx.x)&gt;view_wview-512 or (highesty.y-lowesty.y)&gt;view_hv
 }
 else if (highestx.x-lowestx.x)&lt;view_wview+256 or (highesty.y-lowesty.y)&lt;view_hview+256 {
     if view_wview&gt;1028 and view_hview&gt;768 {
-    if lastdistancex&gt;(highestx.x-lowestx.x) or lastdistancex&gt;(highestx.y-lowestx.y) {
+    if lastdistancex&lt;!(highestx.x-lowestx.x) or lastdistancey&lt;!(highesty.y-lowesty.y) {
     view_wview-=4
     view_hview-=3
     lastdistancex=(highestx.x-lowestx.x)

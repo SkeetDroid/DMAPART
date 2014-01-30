@@ -240,7 +240,7 @@ if place_meeting(x,y,obj_water) or place_meeting(x,y,obj_lava) {
           <argument>
             <kind>1</kind>
             <string>if floor(random(3))=0 {
-    with (other) instance_destroy()
+    with (other) instance_change(obj_ice_fall,true)
     }
 instance_destroy()
 </string>
