@@ -36,6 +36,7 @@ G = .5; // graviti
 vis = 0; // how is visible is the player right now?
 controllerIndex = 0;
 xSpawn = -35
+previousSign = 1;
 
 hp=100
 angle=0
