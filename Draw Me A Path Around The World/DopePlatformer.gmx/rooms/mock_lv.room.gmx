@@ -211,7 +211,6 @@
     <instance objName="obj_45_upside_down" x="416" y="3360" name="inst_9C037F3E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_45_upside_down" x="448" y="3392" name="inst_BDD9C7BF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_45_upside_down" x="480" y="3424" name="inst_1A7A31AA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-<<<<<<< HEAD
     <instance objName="obj_rock" x="544" y="3520" name="inst_D90AF87D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock" x="544" y="3488" name="inst_10154830" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock" x="544" y="3456" name="inst_D9A2221F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -287,7 +286,6 @@
     <instance objName="obj_platform" x="864" y="2784" name="inst_12819D0E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_platform_switcher" x="928" y="2784" name="inst_0F67D75E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_platform_switcher" x="544" y="2784" name="inst_0453FB69" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-=======
     <instance objName="obj_blue_lock" x="416" y="3008" name="inst_3E296C69" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_red_lock" x="448" y="3040" name="inst_8F17311B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_red_lock" x="480" y="3008" name="inst_EABFB80E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -295,7 +293,9 @@
     <instance objName="obj_lock" x="416" y="3040" name="inst_20F85103" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_lock" x="448" y="3008" name="inst_6A590E8D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_drone" x="1888" y="3648" name="inst_5CEB89EC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
->>>>>>> fixed player facing gltich, added drones
+    <instance objName="obj_drone" x="1376" y="3136" name="inst_8F54F057" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_block" x="1248" y="3136" name="inst_044082B8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_block" x="1504" y="3136" name="inst_A1B28A36" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="back_africa_tiles" x="1280" y="3264" w="32" h="32" xo="128" yo="0" id="10000006" name="inst_037402A4" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

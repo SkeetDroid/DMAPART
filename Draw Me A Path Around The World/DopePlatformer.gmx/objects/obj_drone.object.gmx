@@ -70,6 +70,7 @@ hCollide = instance_place(x + hsp, y, obj_blockPar)
 if((hCollide) != noone){
     if((hCollide).type == 1){ //if colliding with type "wall"
         if(place_meeting(x + hsp, y, obj_blockPar)){
+            //make it turn around
             if(right = true)
                 right = false;
             else
@@ -78,15 +79,15 @@ if((hCollide) != noone){
     }
     
     if((hCollide).type == 3){ // if colliding with type PAINT
-        if(place_meeting(x + hsp, y, obj_blockPar)){
+        if(place_meeting(x + hsp, y, obj_drawing)){
             hp -= 1;
+            show_debug_message("We're here");
             with(other){
                 instance_destroy();
             }
         }
     }
 }
-
 
 if(right)
     hsp = -1;
@@ -96,9 +97,9 @@ else
 x+=hsp;
 
 //destroy drone if hp reaches zero
-if(hp &lt;= 0){
-    instance_destroy();
-}
+//if(hp &lt;= 0){
+    //instance_destroy();
+//}
 </string>
           </argument>
         </arguments>
