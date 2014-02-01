@@ -28,6 +28,7 @@
             <string>vspeed=random(10)-5
 hspeed=random(10)-5
 anispeed=random(10)-5
+zspeed=(random(2)-1)/50
 </string>
           </argument>
         </arguments>
@@ -53,7 +54,8 @@ anispeed=random(10)-5
             <string>vspeed+=0.2
 image_angle+=anispeed
 
-
+image_xscale+=zspeed
+image_yscale+=zspeed
 </string>
           </argument>
         </arguments>

@@ -82,7 +82,7 @@ view_vspeed=11
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if obj_player1.x&lt;=obj_player2.x and
+            <string>/*if obj_player1.x&lt;=obj_player2.x and
 obj_player1.x&lt;=obj_player3.x and
 obj_player1.x&lt;=obj_player4.x {
     lowestx=obj_player1
@@ -202,7 +202,10 @@ else if (highestx.x-lowestx.x)&lt;view_wview+256 or (highesty.y-lowesty.y)&lt;vi
 }
 lastdistancex=(highestx.x-lowestx.x)
 lastdistancey=(highesty.y-lowesty.y)
+*/
 
+x=obj_player1.x
+y=obj_player1.y
 </string>
           </argument>
         </arguments>

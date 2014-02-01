@@ -10,7 +10,7 @@ if (keyboard_check_pressed(item_switch_key) or gamepad_button_check_pressed(cont
         }
     }
     
-if (keyboard_check_pressed(item_switch_key) or gamepad_button_check_pressed(controllerIndex,gp_shoulderl)) { //Change Helditem
+if (gamepad_button_check_pressed(controllerIndex,gp_shoulderl)) { //Change Helditem
     if helditem>1 {
         helditem-=1
         }

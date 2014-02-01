@@ -73,7 +73,7 @@ starty=y
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if distance_to_object(obj_playerPar)&lt;16 and hit=false {
+            <string>if distance_to_object(obj_playerPar)&lt;10 and hit=false {
     if obj_playerPar.hourglass=false alarm[0]=6
     else alarm[0]=6*8
     hit=true
