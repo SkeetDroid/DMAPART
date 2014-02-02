@@ -80,6 +80,7 @@ hudbubble[8]=spr_lead_boots
           <argument>
             <kind>1</kind>
             <string>global.gamepad=false
+global.particles=true
 </string>
           </argument>
         </arguments>

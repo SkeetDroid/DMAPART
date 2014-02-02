@@ -181,6 +181,16 @@ gamepad_button_check(0,gp_stickl) or
 gamepad_button_check(0,gp_stickr)
 {global.gamepad=true}
 
+//If gamepad is enable and keyboard is used disable gamepad
+if global.gamepad=true
+if keyboard_check(ord("W")) or
+keyboard_check(ord("A")) or
+keyboard_check(ord("D")) or
+keyboard_check(ord("Q")) or
+keyboard_check(ord("E")) or
+mouse_check_button(mb_left) 
+{global.gamepad=false}
+
 </string>
           </argument>
         </arguments>

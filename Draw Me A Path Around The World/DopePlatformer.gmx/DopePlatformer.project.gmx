@@ -65,6 +65,7 @@
     <sprite>sprites\spr_drawing_filler</sprite>
     <sprite>sprites\spr_drone_small</sprite>
     <sprite>sprites\spr_drone_big</sprite>
+    <sprite>sprites\spr_star</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background</background>
@@ -74,6 +75,9 @@
   </backgrounds>
   <paths name="paths">
     <path>paths\path1</path>
+    <path>paths\path2</path>
+    <path>paths\path3</path>
+    <path>paths\path4</path>
   </paths>
   <scripts name="scripts">
     <script>scripts\constainMovement.gml</script>
@@ -141,6 +145,7 @@
       <object>objects\obj_drone_fall</object>
     </objects>
     <object>objects\obj_camera</object>
+    <object>objects\obj_star</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\mock_lv</room>

@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>self</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -107,7 +107,10 @@ if(right)
 else
     hsp = 1;
 
+if obj_playerPar.hourglass=false
 x+=hsp;
+else
+x+=hsp/8
 
 
 if(hp &lt;= 0){

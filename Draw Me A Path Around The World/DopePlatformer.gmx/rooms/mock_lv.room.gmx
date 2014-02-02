@@ -262,7 +262,6 @@
     <instance objName="obj_ice" x="128" y="864" name="inst_CACF7BFA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_hidden_spikes" x="1088" y="1056" name="inst_3A532B55" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_hidden_spikes" x="1120" y="1056" name="inst_44227525" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_block" x="960" y="864" name="inst_73DFD111" locked="0" code="" scaleX="7" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obj_block" x="1088" y="960" name="inst_2ED9FAFF" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_spikes" x="2560" y="1344" name="inst_2485BDDD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spikes" x="2528" y="1344" name="inst_8D868965" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -284,6 +283,18 @@
     <instance objName="obj_drone" x="1376" y="1216" name="inst_8F54F057" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_block" x="1248" y="1216" name="inst_044082B8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_block" x="1504" y="1216" name="inst_A1B28A36" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_star" x="64" y="928" name="inst_E09D185F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_star" x="96" y="704" name="inst_32739735" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_star" x="1024" y="1024" name="inst_B4C5A74C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_star" x="2656" y="1824" name="inst_B2B3FE15" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_star" x="2528" y="1536" name="inst_C76C7818" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_star" x="2944" y="1792" name="inst_30E17402" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_star" x="1632" y="1600" name="inst_C039B75B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_star" x="704" y="1600" name="inst_2476329D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_block" x="3072" y="1760" name="inst_1DAA92DC" locked="0" code="" scaleX="6" scaleY="1.5" colour="4294967295" rotation="0"/>
+    <instance objName="&lt;undefined&gt;" x="992" y="872" name="inst_2CC23371" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="&lt;undefined&gt;" x="1024" y="872" name="inst_92C4627D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_block" x="960" y="864" name="inst_6481CA19" locked="0" code="" scaleX="7" scaleY="3" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="back_africa_tiles" x="1280" y="1344" w="32" h="32" xo="128" yo="0" id="10000006" name="inst_037402A4" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -742,21 +753,13 @@
     <tile bgName="back_africa_tiles" x="1152" y="864" w="32" h="32" xo="96" yo="0" id="10000831" name="inst_FECEEBDC" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="back_africa_tiles" x="1120" y="864" w="32" h="32" xo="64" yo="0" id="10000832" name="inst_6D9A47D5" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="back_africa_tiles" x="1088" y="864" w="32" h="32" xo="64" yo="0" id="10000833" name="inst_6CD258C6" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="back_africa_tiles" x="1056" y="864" w="32" h="32" xo="64" yo="0" id="10000834" name="inst_D17495E1" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="back_africa_tiles" x="1024" y="864" w="32" h="32" xo="64" yo="0" id="10000835" name="inst_DFC1800B" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="back_africa_tiles" x="992" y="864" w="32" h="32" xo="64" yo="0" id="10000836" name="inst_D037530E" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="back_africa_tiles" x="960" y="864" w="32" h="32" xo="64" yo="0" id="10000837" name="inst_CC3DFC3F" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="back_africa_tiles" x="1152" y="1056" w="32" h="32" xo="96" yo="0" id="10000839" name="inst_DC4BAF62" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="back_africa_tiles" x="1120" y="1056" w="32" h="32" xo="64" yo="0" id="10000840" name="inst_76865FDF" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="back_africa_tiles" x="1088" y="1056" w="32" h="32" xo="64" yo="0" id="10000841" name="inst_447E0263" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="back_africa_tiles" x="1056" y="1056" w="32" h="32" xo="64" yo="0" id="10000842" name="inst_228FA803" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="back_africa_tiles" x="1024" y="1056" w="32" h="32" xo="64" yo="0" id="10000843" name="inst_0A69A298" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="back_africa_tiles" x="1056" y="928" w="32" h="32" xo="64" yo="32" id="10000846" name="inst_EB9F8243" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="back_africa_tiles" x="1024" y="928" w="32" h="32" xo="64" yo="32" id="10000847" name="inst_B68FCF3A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="back_africa_tiles" x="992" y="928" w="32" h="32" xo="64" yo="32" id="10000848" name="inst_4AF90679" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="back_africa_tiles" x="960" y="1024" w="32" h="32" xo="64" yo="128" id="10000850" name="inst_90284237" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="back_africa_tiles" x="960" y="992" w="32" h="32" xo="64" yo="128" id="10000851" name="inst_1B376B88" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="back_africa_tiles" x="960" y="960" w="32" h="32" xo="64" yo="128" id="10000852" name="inst_2D6ABF6A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="back_africa_tiles" x="992" y="1056" w="32" h="32" xo="64" yo="0" id="10000853" name="inst_B6A0C729" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="back_africa_tiles" x="1120" y="1888" w="32" h="32" xo="0" yo="64" id="10000854" name="inst_14EA55A3" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="back_africa_tiles" x="1088" y="1888" w="32" h="32" xo="0" yo="64" id="10000855" name="inst_102DB95D" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -790,11 +793,6 @@
     <tile bgName="back_africa_tiles" x="960" y="1120" w="32" h="32" xo="0" yo="64" id="10000883" name="inst_AB56B9FA" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="back_africa_tiles" x="960" y="1088" w="32" h="32" xo="0" yo="64" id="10000884" name="inst_77B1DFDA" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="back_africa_tiles" x="960" y="1056" w="32" h="32" xo="0" yo="64" id="10000885" name="inst_02A08D34" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="back_africa_tiles" x="960" y="928" w="32" h="32" xo="0" yo="64" id="10000886" name="inst_E83C30DC" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="back_africa_tiles" x="960" y="896" w="32" h="32" xo="0" yo="64" id="10000887" name="inst_1F041D43" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="back_africa_tiles" x="992" y="896" w="32" h="32" xo="0" yo="64" id="10000888" name="inst_D851DFBE" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="back_africa_tiles" x="1024" y="896" w="32" h="32" xo="0" yo="64" id="10000889" name="inst_47C52940" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="back_africa_tiles" x="1056" y="896" w="32" h="32" xo="0" yo="64" id="10000890" name="inst_232E5856" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="back_africa_tiles" x="1088" y="896" w="32" h="32" xo="0" yo="64" id="10000891" name="inst_015F262C" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="back_africa_tiles" x="1120" y="896" w="32" h="32" xo="0" yo="64" id="10000892" name="inst_9B0664BB" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="back_africa_tiles" x="992" y="1088" w="32" h="32" xo="0" yo="64" id="10000893" name="inst_FFCB8ECE" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -911,7 +909,6 @@
     <tile bgName="back_africa_tiles" x="2688" y="1728" w="32" h="32" xo="128" yo="64" id="10001006" name="inst_89C65DF0" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="back_africa_tiles" x="2464" y="1856" w="32" h="32" xo="96" yo="96" id="10001007" name="inst_0146ECD8" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="back_africa_tiles" x="960" y="1056" w="32" h="32" xo="96" yo="96" id="10001008" name="inst_CA4AAEE2" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="back_africa_tiles" x="960" y="928" w="32" h="32" xo="96" yo="64" id="10001009" name="inst_E3EE9924" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="back_africa_tiles" x="1024" y="1728" w="32" h="32" xo="0" yo="64" id="10001012" name="inst_B6266336" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="back_africa_tiles" x="1024" y="1696" w="32" h="32" xo="0" yo="64" id="10001013" name="inst_B3F7226E" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="back_africa_tiles" x="1024" y="1664" w="32" h="32" xo="0" yo="64" id="10001014" name="inst_D5636449" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -2046,6 +2043,21 @@
     <tile bgName="back_africa_tiles" x="1120" y="928" w="32" h="32" xo="0" yo="64" id="10002325" name="inst_0D43C543" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="back_africa_tiles" x="1088" y="928" w="32" h="32" xo="128" yo="64" id="10002326" name="inst_742FF0B4" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="back_africa_tiles" x="1120" y="928" w="32" h="32" xo="96" yo="64" id="10002327" name="inst_909C92CE" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_sky" x="896" y="960" w="1" h="3840" xo="0" yo="0" id="10002334" name="inst_5E3DC6D2" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="960" y="960" w="32" h="32" xo="64" yo="128" id="10002335" name="inst_8E3D165D" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="992" y="928" w="32" h="32" xo="64" yo="32" id="10002336" name="inst_F723C1F4" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="1024" y="928" w="32" h="32" xo="64" yo="32" id="10002337" name="inst_53C011D9" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="1056" y="928" w="32" h="32" xo="64" yo="32" id="10002338" name="inst_CA605323" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="960" y="864" w="32" h="32" xo="64" yo="0" id="10002339" name="inst_CFDF9E07" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="992" y="864" w="32" h="32" xo="64" yo="0" id="10002340" name="inst_68F113DC" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="1024" y="864" w="32" h="32" xo="64" yo="0" id="10002341" name="inst_F5157C2D" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="1056" y="864" w="32" h="32" xo="64" yo="0" id="10002342" name="inst_88818A1C" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="960" y="928" w="32" h="32" xo="0" yo="64" id="10002343" name="inst_DFF08B48" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="960" y="896" w="32" h="32" xo="0" yo="64" id="10002344" name="inst_9B211ED2" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="992" y="896" w="32" h="32" xo="0" yo="64" id="10002345" name="inst_DA57CA96" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="1024" y="896" w="32" h="32" xo="0" yo="64" id="10002346" name="inst_2E87BD08" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="1056" y="896" w="32" h="32" xo="0" yo="64" id="10002347" name="inst_4E2A366A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="960" y="928" w="32" h="32" xo="96" yo="64" id="10002348" name="inst_9BBF6B3E" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>
