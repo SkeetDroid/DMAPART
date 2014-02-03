@@ -81,6 +81,7 @@ hudbubble[8]=spr_lead_boots
             <kind>1</kind>
             <string>global.gamepad=false
 global.particles=true
+global.stars=0
 </string>
           </argument>
         </arguments>
@@ -104,16 +105,18 @@ global.particles=true
           <argument>
             <kind>1</kind>
             <string>if instance_number(obj_player1)=1 {
-    draw_sprite_ext(spr_test_HUD,0,8,0,1,1,0,c_yellow,1)
-    draw_sprite_ext(hudbubble[obj_player1.helditem-1],0,8+8,1,0.5,0.5,0,c_white,1)
-    draw_sprite_ext(hudbubble[obj_player1.helditem+1],0,8+96,1,0.5,0.5,0,c_white,1)
-    draw_sprite_ext(hudbubble[obj_player1.helditem],0,8+40,1+8,1,1,0,c_white,1)
-    if obj_player1.helditem=1 and obj_player1.leadboots=true draw_sprite_ext(spr_enabled,0,8+40,1+8,1,1,0,c_white,1)
-    if obj_player1.helditem=2 and obj_player1.hourglass=true draw_sprite_ext(spr_enabled,0,8+40,1+8,1,1,0,c_white,1)
-    if obj_player1.helditem=3 and obj_player1.voodoo=true draw_sprite_ext(spr_enabled,0,8+40,1+8,1,1,0,c_white,1)
+    draw_sprite_ext(spr_test_HUD,0,view_wview/2-64,0,1,1,0,c_yellow,1)
+    draw_sprite_ext(hudbubble[obj_player1.helditem-1],0,view_wview/2-64+8,1,0.5,0.5,0,c_white,1)
+    draw_sprite_ext(hudbubble[obj_player1.helditem+1],0,view_wview/2-64+96,1,0.5,0.5,0,c_white,1)
+    draw_sprite_ext(hudbubble[obj_player1.helditem],0,view_wview/2-64+40,1+8,1,1,0,c_white,1)
+    if obj_player1.helditem=1 and obj_player1.leadboots=true draw_sprite_ext(spr_enabled,0,view_wview/2-64+40,1+8,1,1,0,c_white,1)
+    if obj_player1.helditem=2 and obj_player1.hourglass=true draw_sprite_ext(spr_enabled,0,view_wview/2-64+40,1+8,1,1,0,c_white,1)
+    if obj_player1.helditem=3 and obj_player1.voodoo=true draw_sprite_ext(spr_enabled,0,view_wview/2-64+40,1+8,1,1,0,c_white,1)
+    draw_set_halign(fa_center)
+    draw_text(view_wview/2,64,string(global.stars)+"/10")
 }
 
-if instance_number(obj_player2)=1 {
+/* if instance_number(obj_player2)=1 {
     draw_sprite_ext(spr_test_HUD,0,128+8+8,0,1,1,0,c_blue,1)
     draw_sprite_ext(hudbubble[obj_player2.helditem-1],0,128+8+8+8,1,0.5,0.5,0,c_white,1)
     draw_sprite_ext(hudbubble[obj_player2.helditem+1],0,128+8+8+96,1,0.5,0.5,0,c_white,1)

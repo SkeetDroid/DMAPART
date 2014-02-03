@@ -40,8 +40,12 @@ if (keyboard_check_pressed(item_use_key) or gamepad_button_check_pressed(control
         }
     }
     
+    
 if leadboots=true and helditem!=1 { //Disable Items if not held
     leadboots=false
+    }
+if hourglass=true and helditem!=2 { //Disable Items if not held
+    hourglass=false
     }
 if voodoo=true and helditem!=3 { //Disable Items if not held
     voodoo=false

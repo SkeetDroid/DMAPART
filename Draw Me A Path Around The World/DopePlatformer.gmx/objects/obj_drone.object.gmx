@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_enemyPar</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -91,7 +91,7 @@ platform switcher code. keeping just in case we make a drone switcher.
 var hCollide;
 hCollide = instance_place(x + hsp, y, obj_blockPar)
 if((hCollide) != noone){
-    if((hCollide).type == 1) and hCollide.object_index!=obj_drawing { //if colliding with type "wall"
+    if((hCollide).type == 1) { //if colliding with type "wall"
         if(place_meeting(x + hsp, y, obj_blockPar)){
             //make it turn around
             if(right = true)
@@ -123,7 +123,33 @@ if(hp &lt;= 0){
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_drawing">
+    <event eventtype="4" ename="obj_explosion">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>hp-=0.5
+
+image_blend=c_red
+alarm[0]=2
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_ice_shard">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -145,6 +171,80 @@ hp-=1
 
 image_blend=c_red
 alarm[0]=2
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_fire_ball">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>with (other) instance_destroy()
+hp-=0.1
+
+image_blend=c_red
+alarm[0]=2
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_drawing">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>with (other) instance_destroy()
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_self()
+draw_healthbar(x-16,y-21-1,x+16,y-17-1,hp*5,c_red,c_green,c_green,0,true,false)
 </string>
           </argument>
         </arguments>

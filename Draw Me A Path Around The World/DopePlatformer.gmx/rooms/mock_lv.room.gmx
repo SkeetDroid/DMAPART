@@ -3,8 +3,8 @@
   <caption></caption>
   <width>3840</width>
   <height>1920</height>
-  <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <vsnap>16</vsnap>
+  <hsnap>16</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -286,13 +286,16 @@
     <instance objName="obj_star" x="64" y="928" name="inst_E09D185F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_star" x="96" y="704" name="inst_32739735" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_star" x="1024" y="1024" name="inst_B4C5A74C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_star" x="2656" y="1824" name="inst_B2B3FE15" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_star" x="2528" y="1536" name="inst_C76C7818" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_star" x="2944" y="1792" name="inst_30E17402" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_star" x="2640" y="1824" name="inst_B2B3FE15" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_star" x="2544" y="1536" name="inst_C76C7818" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_star" x="2944" y="1808" name="inst_30E17402" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_star" x="1632" y="1600" name="inst_C039B75B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_star" x="704" y="1600" name="inst_2476329D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_block" x="3072" y="1760" name="inst_1DAA92DC" locked="0" code="" scaleX="6" scaleY="1.5" colour="4294967295" rotation="0"/>
     <instance objName="obj_block" x="960" y="864" name="inst_6481CA19" locked="0" code="" scaleX="7" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="obj_super_drone" x="1664" y="1440" name="inst_182E7CBD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_star" x="384" y="448" name="inst_F278FF28" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_star" x="1232" y="1472" name="inst_E28B0035" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="back_africa_tiles" x="1280" y="1344" w="32" h="32" xo="128" yo="0" id="10000006" name="inst_037402A4" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

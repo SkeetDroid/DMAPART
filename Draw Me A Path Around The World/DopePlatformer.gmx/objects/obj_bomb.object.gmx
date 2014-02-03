@@ -29,6 +29,11 @@
     instance_create(x,y,obj_explosion)
     instance_destroy()
 }
+if place_meeting(x,y,obj_enemyPar) {
+    instance_create(x,y,obj_explosion)
+    instance_destroy()
+}
+
 vspeed+=0.2
 image_angle+=4
 </string>

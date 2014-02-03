@@ -91,8 +91,10 @@
     <font>fonts\BITFONT</font>
   </fonts>
   <objects name="objects">
+    <object>objects\obj_controller</object>
     <object>objects\obj_block</object>
     <object>objects\obj_blockPar</object>
+    <object>objects\obj_enemyPar</object>
     <object>objects\obj_playerPar</object>
     <object>objects\obj_player1</object>
     <object>objects\obj_player2</object>
@@ -100,6 +102,7 @@
     <object>objects\obj_player4</object>
     <object>objects\obj_platform</object>
     <object>objects\obj_drone</object>
+    <object>objects\obj_super_drone</object>
     <object>objects\obj_spikes</object>
     <object>objects\obj_spikes_wall_right</object>
     <object>objects\obj_spikes_wall_left</object>
@@ -126,7 +129,6 @@
     <object>objects\obj_rock</object>
     <object>objects\obj_ice</object>
     <object>objects\obj_player</object>
-    <object>objects\obj_controller</object>
     <object>objects\obj_key</object>
     <object>objects\obj_red_key</object>
     <object>objects\obj_blue_key</object>
@@ -144,6 +146,7 @@
       <object>objects\obj_rock_fall</object>
       <object>objects\obj_ice_fall</object>
       <object>objects\obj_drone_fall</object>
+      <object>objects\obj_super_drone_fall</object>
     </objects>
     <object>objects\obj_camera</object>
     <object>objects\obj_star</object>
