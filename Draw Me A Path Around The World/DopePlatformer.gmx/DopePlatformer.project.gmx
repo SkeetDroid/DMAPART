@@ -67,6 +67,7 @@
     <sprite>sprites\spr_drone_small</sprite>
     <sprite>sprites\spr_drone_big</sprite>
     <sprite>sprites\spr_star</sprite>
+    <sprite>sprites\spr_eraser</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background</background>
@@ -114,6 +115,7 @@
     <object>objects\obj_45_left_upside_down</object>
     <object>objects\obj_60ish</object>
     <object>objects\obj_drawing</object>
+    <object>objects\obj_end_drawing</object>
     <object>objects\obj_drawer1</object>
     <object>objects\obj_drawer2</object>
     <object>objects\obj_drawer3</object>
@@ -150,6 +152,7 @@
     </objects>
     <object>objects\obj_camera</object>
     <object>objects\obj_star</object>
+    <object>objects\obj_eraser</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\mock_lv</room>

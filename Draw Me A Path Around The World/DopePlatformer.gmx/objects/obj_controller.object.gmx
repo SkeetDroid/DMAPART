@@ -39,6 +39,52 @@ hudbubble[8]=spr_lead_boots
         </arguments>
       </action>
     </event>
+    <event eventtype="6" enumb="56">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>instance_create(mouse_x,mouse_y,obj_end_drawing)
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="51">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>instance_create(mouse_x,mouse_y,obj_eraser)
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="6" enumb="50">
       <action>
         <libid>1</libid>
@@ -104,7 +150,9 @@ global.stars=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if instance_number(obj_player1)=1 {
+            <string>draw_text(64,16,"FPS: "+string(round((fps_real/100)*100)))
+
+if instance_number(obj_player1)=1 {
     draw_sprite_ext(spr_test_HUD,0,view_wview/2-64,0,1,1,0,c_yellow,1)
     draw_sprite_ext(hudbubble[obj_player1.helditem-1],0,view_wview/2-64+8,1,0.5,0.5,0,c_white,1)
     draw_sprite_ext(hudbubble[obj_player1.helditem+1],0,view_wview/2-64+96,1,0.5,0.5,0,c_white,1)
@@ -115,38 +163,6 @@ global.stars=0
     draw_set_halign(fa_center)
     draw_text(view_wview/2,64,string(global.stars)+"/10")
 }
-
-/* if instance_number(obj_player2)=1 {
-    draw_sprite_ext(spr_test_HUD,0,128+8+8,0,1,1,0,c_blue,1)
-    draw_sprite_ext(hudbubble[obj_player2.helditem-1],0,128+8+8+8,1,0.5,0.5,0,c_white,1)
-    draw_sprite_ext(hudbubble[obj_player2.helditem+1],0,128+8+8+96,1,0.5,0.5,0,c_white,1)
-    draw_sprite_ext(hudbubble[obj_player2.helditem],0,128+8+8+40,1+8,1,1,0,c_white,1)
-    if obj_player2.helditem=1 and obj_player2.leadboots=true draw_sprite_ext(spr_enabled,0,128+8+8+40,1+8,1,1,0,c_white,1)
-    if obj_player2.helditem=2 and obj_player2.hourglass=true draw_sprite_ext(spr_enabled,0,128+8+8+40,1+8,1,1,0,c_white,1)
-    if obj_player2.helditem=3 and obj_player2.voodoo=true draw_sprite_ext(spr_enabled,0,128+8+8+40,1+8,1,1,0,c_white,1)
-}
-
-if instance_number(obj_player3)=1 {
-    draw_sprite_ext(spr_test_HUD,0,128+128+8+8+8,0,1,1,0,c_green,1)
-    draw_sprite_ext(hudbubble[obj_player3.helditem-1],0,128+128+8+8+8+8,1,0.5,0.5,0,c_white,1)
-    draw_sprite_ext(hudbubble[obj_player3.helditem+1],0,128+128+8+8+8+96,1,0.5,0.5,0,c_white,1)
-    draw_sprite_ext(hudbubble[obj_player3.helditem],0,128+128+8+8+8+40,1+8,1,1,0,c_white,1)
-    if obj_player3.helditem=1 and obj_player3.leadboots=true draw_sprite_ext(spr_enabled,0,128+128+8+8+8+40,1+8,1,1,0,c_white,1)
-    if obj_player3.helditem=2 and obj_player3.hourglass=true draw_sprite_ext(spr_enabled,0,128+128+8+8+8+40,1+8,1,1,0,c_white,1)
-    if obj_player3.helditem=3 and obj_player3.voodoo=true draw_sprite_ext(spr_enabled,0,128+128+8+8+8+40,1+8,1,1,0,c_white,1)
-}
-
-if instance_number(obj_player4)=1 {
-    draw_sprite_ext(spr_test_HUD,0,128+128+128+8+8+8+8,0,1,1,0,c_red,1)
-    draw_sprite_ext(hudbubble[obj_player4.helditem-1],0,128+128+128+8+8+8+8+8,1,0.5,0.5,0,c_white,1)
-    draw_sprite_ext(hudbubble[obj_player4.helditem+1],0,128+128+128+8+8+8+8+96,1,0.5,0.5,0,c_white,1)
-    draw_sprite_ext(hudbubble[obj_player4.helditem],0,128+128+128+8+8+8+8+40,1+8,1,1,0,c_white,1)
-    if obj_player4.helditem=1 and obj_player4.leadboots=true draw_sprite_ext(spr_enabled,0,128+128+128+8+8+8+8+40,1+8,1,1,0,c_white,1)
-    if obj_player4.helditem=2 and obj_player4.hourglass=true draw_sprite_ext(spr_enabled,0,128+128+128+8+8+8+8+40,1+8,1,1,0,c_white,1)
-    if obj_player4.helditem=3 and obj_player4.voodoo=true draw_sprite_ext(spr_enabled,0,128+128+128+8+8+8+8+40,1+8,1,1,0,c_white,1)
-}
-
-
 
 </string>
           </argument>
