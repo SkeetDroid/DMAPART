@@ -96,6 +96,7 @@
     <object>objects\obj_block</object>
     <object>objects\obj_blockPar</object>
     <object>objects\obj_enemyPar</object>
+    <object>objects\obj_spikesPar</object>
     <object>objects\obj_playerPar</object>
     <object>objects\obj_player1</object>
     <object>objects\obj_player2</object>
