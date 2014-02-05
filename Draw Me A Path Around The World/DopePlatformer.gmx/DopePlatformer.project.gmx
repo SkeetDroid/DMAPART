@@ -45,7 +45,7 @@
     <sprite>sprites\spr_ice_shard</sprite>
     <sprite>sprites\sprite31</sprite>
     <sprite>sprites\spr_test_HUD</sprite>
-    <sprite>sprites\spr_enabled</sprite>
+    <sprite>sprites\spr_hp_circle</sprite>
     <sprite>sprites\spr_lead_boots</sprite>
     <sprite>sprites\spr_magic_hourglass</sprite>
     <sprite>sprites\spr_voodoo_wand</sprite>
@@ -68,6 +68,7 @@
     <sprite>sprites\spr_drone_big</sprite>
     <sprite>sprites\spr_star</sprite>
     <sprite>sprites\spr_eraser</sprite>
+    <sprite>sprites\spr_enabled</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background</background>
@@ -150,6 +151,7 @@
       <object>objects\obj_ice_fall</object>
       <object>objects\obj_drone_fall</object>
       <object>objects\obj_super_drone_fall</object>
+      <object>objects\obj_player_fall</object>
     </objects>
     <object>objects\obj_camera</object>
     <object>objects\obj_star</object>

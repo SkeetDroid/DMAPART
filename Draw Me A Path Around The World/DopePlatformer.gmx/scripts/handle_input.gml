@@ -52,7 +52,7 @@ if(!keyboard_check(left_key) && !keyboard_check(right_key)) && (gamepad_axis_val
 
 //jump code
 if leadboots=false {
-if(keyboard_check_pressed(up_key) || gamepad_button_check(controllerIndex,gp_face1)){
+if(keyboard_check(up_key) || gamepad_button_check(controllerIndex,gp_face1)){
     // we check for wall jumps before regular jump to avoid problems...to see what i mean
     //put both wall jump checks after the onground check.
     /*

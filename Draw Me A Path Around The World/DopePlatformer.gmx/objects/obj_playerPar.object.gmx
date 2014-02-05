@@ -76,6 +76,30 @@ show_debug_message(string(gamepad_is_connected(4)));
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>x=startx
+y=starty
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="1">
       <action>
         <libid>1</libid>
@@ -163,12 +187,13 @@ y += vsp;
 
 //Death
 if hp&lt;=0 {
+    hp=0
     if canmove=true {
     canmove=false
-    x=startx
-    y=starty
+    alarm[2]=60*2
     image_alpha=0
     alarm[0]=60*3
+    instance_create(x,y,obj_player_fall)
     }
 }
 
@@ -226,6 +251,29 @@ mouse_check_button(mb_left)
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="obj_drawing">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>y-=1
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="obj_spikesPar">
       <action>
         <libid>1</libid>
@@ -250,29 +298,6 @@ mouse_check_button(mb_left)
     alarm[1]=10
     canbehit=false
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_drawing">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>y-=1
 </string>
           </argument>
         </arguments>
