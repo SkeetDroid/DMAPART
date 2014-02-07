@@ -17,6 +17,12 @@ if((vCollide) != noone){
             if(vsp < 0){ // if player hits his head
                 move_contact_all(90,0); // contact block and then....
             }
+            if vsp>25 and canbehit=true { //Fall Damage
+            hp-=vsp
+            alarm[1]=10
+            image_blend=c_red
+            canbehit=false
+            }
             vsp = 0; //fall/stop vertical movement
         }
     }

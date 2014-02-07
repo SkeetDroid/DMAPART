@@ -100,10 +100,64 @@ if image_xscale&lt;3 and global.gamepad=false{
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if distance_to_object(obj_red_teleporter)&lt;96 {
+            <string>if distance_to_object(obj_red_teleporter)&lt;32 {
 portal=instance_nearest(x,y,obj_red_teleporter)
 move_towards_point(portal.x,portal.y,4)
 }
+if distance_to_object(obj_blue_teleporter)&lt;32 {
+portal=instance_nearest(x,y,obj_blue_teleporter)
+move_towards_point(portal.x,portal.y,4)
+}
+if distance_to_object(obj_grey_teleporter)&lt;32 {
+portal=instance_nearest(x,y,obj_grey_teleporter)
+move_towards_point(portal.x,portal.y,4)
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_grey_teleporter">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>instance_destroy()
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_blue_teleporter">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>instance_destroy()
 </string>
           </argument>
         </arguments>

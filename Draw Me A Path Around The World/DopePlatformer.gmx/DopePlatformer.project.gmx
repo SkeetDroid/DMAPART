@@ -70,6 +70,8 @@
     <sprite>sprites\spr_eraser</sprite>
     <sprite>sprites\spr_enabled</sprite>
     <sprite>sprites\spr_teleporter</sprite>
+    <sprite>sprites\spr_blue_teleporter</sprite>
+    <sprite>sprites\spr_grey_teleporter</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background</background>
@@ -158,6 +160,8 @@
     <object>objects\obj_star</object>
     <object>objects\obj_eraser</object>
     <object>objects\obj_red_teleporter</object>
+    <object>objects\obj_blue_teleporter</object>
+    <object>objects\obj_grey_teleporter</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\mock_lv</room>

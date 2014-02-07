@@ -323,7 +323,7 @@ mouse_check_button(mb_left)
             <kind>1</kind>
             <string>if canbehit=true {
     hsp=-hsp
-    vsp=-vsp
+    vsp=-vsp/2
     hp-=10
     alarm[1]=10
     canbehit=false
