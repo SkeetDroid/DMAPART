@@ -119,7 +119,7 @@ else {
 }
 }
 
-if collector.canmove=false and unlocking=false {
+if collector.hp=0 and unlocking=false {
     instance_create(startx,starty,obj_key)
     instance_destroy()
 }

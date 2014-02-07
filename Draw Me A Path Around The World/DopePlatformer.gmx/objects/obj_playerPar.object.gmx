@@ -213,6 +213,7 @@ else {
     image_blend=c_white
 }
 
+
 //If gamepad is used, enable it.
 if global.gamepad=false
 if gamepad_axis_value(0,gp_axislh)&gt;0.2 or
