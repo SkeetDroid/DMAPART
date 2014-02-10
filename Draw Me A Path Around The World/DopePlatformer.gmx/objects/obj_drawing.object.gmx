@@ -75,7 +75,7 @@ else {
     sprite_index=spr_drawing
 }
 
-if image_xscale&lt;3 and global.gamepad=false{
+if image_xscale&lt;1 and global.gamepad=false{
     instance_destroy()
 }
 </string>
@@ -227,8 +227,8 @@ move_towards_point(portal.x,portal.y,4)
           <argument>
             <kind>1</kind>
             <string>draw_self()
-draw_sprite(spr_drawing,0,x,y)
-draw_sprite(spr_drawing,0,x+lengthdir_x(image_xscale/5,image_angle),y+lengthdir_y(image_xscale/5,image_angle))
+draw_sprite_ext(spr_drawing,0,x,y,image_yscale,image_yscale,0,c_white,1)
+draw_sprite_ext(spr_drawing,0,lengthdir_x(image_xscale/5,image_angle),lengthdir_y(image_xscale/5,image_angle),image_yscale,image_yscale,0,c_white,1)
 </string>
           </argument>
         </arguments>

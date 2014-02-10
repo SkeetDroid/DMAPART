@@ -29,10 +29,10 @@
 alarm[0]=1
 
 if floor(random(2))=0 {
-    spinDirection=-4
+    spinDirection=-floor(random(8))-1
 }
 else {
-    spinDirection=4
+    spinDirection=floor(random(8))+1
 }
 
 teleporting=false
@@ -65,6 +65,7 @@ player.depth=1215752191
 player.vsp-=10
 
 portal=instance_furthest(x,y,obj_red_teleporter)
+if global.particles=true
 effect_create_above(ef_firework,portal.x,portal.y,2,c_red)
 </string>
           </argument>
@@ -112,8 +113,10 @@ effect_create_above(ef_firework,portal.x,portal.y,2,c_red)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>if obj_playerPar.hourglass=false
 image_angle+=spinDirection
+else
+image_angle+=spinDirection/4
 
 if active=true {
     player=instance_nearest(x,y,obj_playerPar)
@@ -166,6 +169,7 @@ if active=true {
     other.depth=2
     alarm[1]=60*2
     thePlayer=other
+    if global.particles=true
     effect_create_above(ef_firework,x,y,2,c_red)
 }
 </string>

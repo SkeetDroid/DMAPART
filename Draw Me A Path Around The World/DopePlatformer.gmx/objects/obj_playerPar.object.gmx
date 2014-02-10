@@ -61,6 +61,8 @@ canmove=true
 startx=x
 starty=y
 
+onfire=false
+
 canbehit=true
 
 //spawn other players if additional gamepads detected
@@ -71,6 +73,29 @@ show_debug_message(string(gamepad_is_connected(1)));
 show_debug_message(string(gamepad_is_connected(2)));
 show_debug_message(string(gamepad_is_connected(3)));
 show_debug_message(string(gamepad_is_connected(4)));
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>onfire=false
 </string>
           </argument>
         </arguments>
@@ -194,6 +219,7 @@ if hp&lt;=0 {
     image_alpha=0
     alarm[0]=60*3
     instance_create(x,y,obj_player_fall)
+    onfire=false
     }
 }
 
@@ -203,6 +229,16 @@ if fadingin=true {
     }
     else {
     fadingin=false
+    }
+}
+
+if onfire=true and canbehit=true {
+    hp-=2
+    alarm[1]=20
+    canbehit=false
+    if global.particles=true and hp&gt;0 {
+        effect_create_below(ef_smokeup,x,y-16,0,c_red)
+        effect_create_below(ef_smokeup,x,y-16,0,c_orange)
     }
 }
 
@@ -293,9 +329,20 @@ mouse_check_button(mb_left)
           <argument>
             <kind>1</kind>
             <string>if canbehit=true {
-    hsp=-hsp
-    vsp=-vsp
-    hp-=75
+    if other.object_index=obj_lava
+        {
+        hp-=10
+        onfire=true
+        alarm[3]=60*3
+        hsp=-hsp/2
+        vsp=-vsp/2
+        }
+    else
+        {
+        hp-=75
+        hsp=-hsp/2
+        vsp=-vsp/2
+        }
     alarm[1]=10
     canbehit=false
 }
