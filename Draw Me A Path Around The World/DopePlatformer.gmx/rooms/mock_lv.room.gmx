@@ -298,6 +298,7 @@
     <instance objName="obj_grey_teleporter" x="1232" y="1600" name="inst_97BE7C9F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_blue_teleporter" x="1632" y="1584" name="inst_5DC0CA6B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_blue_teleporter" x="96" y="704" name="inst_4D108F3A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_end_cloud" x="2016" y="1312" name="inst_19954F9D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="back_africa_tiles" x="1280" y="1344" w="32" h="32" xo="128" yo="0" id="10000006" name="inst_037402A4" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
