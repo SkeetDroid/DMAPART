@@ -35,8 +35,7 @@ hudbubble[6]=spr_ice_rod
 hudbubble[7]=spr_rubber_chicken
 hudbubble[8]=spr_lead_boots
 
-instance_create(x,y,obj_camera)
-instance_create(x,y,obj_drawer1)
+
 </string>
           </argument>
         </arguments>

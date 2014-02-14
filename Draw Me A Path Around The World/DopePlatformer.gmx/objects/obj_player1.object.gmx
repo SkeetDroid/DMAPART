@@ -50,6 +50,9 @@ item_use_key=ord("E")
 color=c_yellow
 x_draw=32
 y_draw=0
+
+instance_create(x,y,obj_camera)
+instance_create(x,y,obj_drawer1)
 </string>
           </argument>
         </arguments>

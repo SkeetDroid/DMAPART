@@ -238,6 +238,9 @@ if fadingin=true {
 
 if onfire=true and canbehit=true {
     hp-=2
+    if place_meeting(x,y,obj_lava) {
+    hp-=25
+    }
     alarm[1]=20
     canbehit=false
     if global.particles=true and hp&gt;0 {
@@ -290,24 +293,7 @@ keyboard_check(ord("E")) or
 mouse_check_button(mb_left) 
 {global.gamepad=false}
 
-//On Cloud
-if obj_end_cloud.hit=true {
-    canmove=false
-    hp=100
-    leadboots=false
-    voodoo=false
-    hourglass=false
-    candraw=false
-    hsp=0
-    vsp=0
-    depth=-9
-    canbehit=false
-    onfire=false
-    if obj_end_cloud.path=path_cloud1
-    image_xscale=-1
-    else
-    image_xscale=1
-}
+
 </string>
           </argument>
         </arguments>
@@ -422,7 +408,8 @@ if obj_end_cloud.hit=true {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hp=0
+            <string>if obj_end_cloud.hit=false
+hp=0
 </string>
           </argument>
         </arguments>
