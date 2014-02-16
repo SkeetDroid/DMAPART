@@ -42,6 +42,9 @@ currentstar=1
 alarm[0]=30
 
 showstars=false
+
+if global.stars=0
+star[11]=true
 </string>
           </argument>
         </arguments>
@@ -93,23 +96,38 @@ showstars=true
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//I know this is ugly. But it should work...
+            <string>draw_sprite(spr_dot,0,view_wview/2-192,view_hview/2-48)
+draw_sprite(spr_dot,0,view_wview/2-96,view_hview/2-48)
+draw_sprite(spr_dot,0,view_wview/2,view_hview/2-48)
+draw_sprite(spr_dot,0,view_wview/2+96,view_hview/2-48)
+draw_sprite(spr_dot,0,view_wview/2+192,view_hview/2-48)
+draw_sprite(spr_dot,0,view_wview/2-192,view_hview/2+48)
+draw_sprite(spr_dot,0,view_wview/2-96,view_hview/2+48)
+draw_sprite(spr_dot,0,view_wview/2,view_hview/2+48)
+draw_sprite(spr_dot,0,view_wview/2+96,view_hview/2+48)
+draw_sprite(spr_dot,0,view_wview/2+192,view_hview/2+48)
+
+//I know this is ugly. But it should work...
 if showstars=true {
-    if star[1]=true and global.stars&gt;0 draw_sprite(spr_star,0,view_wview/2-96,view_hview/2) else star[11]=true
-    if star[2]=true and global.stars&gt;1 draw_sprite(spr_star,0,view_wview/2-48,view_hview/2) else star[11]=true
-    if star[3]=true and global.stars&gt;2 draw_sprite(spr_star,0,view_wview/2,view_hview/2) else star[11]=true //Middle
-    if star[4]=true and global.stars&gt;3 draw_sprite(spr_star,0,view_wview/2+48,view_hview/2) else star[11]=true
-    if star[5]=true and global.stars&gt;4 draw_sprite(spr_star,0,view_wview/2+96,view_hview/2) else star[11]=true
-    if star[6]=true and global.stars&gt;5 draw_sprite(spr_star,0,view_wview/2-96,view_hview/2+48) else star[11]=true
-    if star[7]=true and global.stars&gt;6 draw_sprite(spr_star,0,view_wview/2-48,view_hview/2+48) else star[11]=true
-    if star[8]=true and global.stars&gt;7 draw_sprite(spr_star,0,view_wview/2,view_hview/2+48) else star[11]=true //Middle
-    if star[9]=true and global.stars&gt;8 draw_sprite(spr_star,0,view_wview/2+48,view_hview/2+48) else star[11]=true
-    if star[10]=true and global.stars&gt;9 draw_sprite(spr_star,0,view_wview/2+96,view_hview/2+48) else star[11]=true
+    if star[1]=true and global.stars&gt;0 draw_sprite(spr_big_star,0,view_wview/2-192,view_hview/2-48) else if global.stars=currentstar-1 star[11]=true
+    if star[2]=true and global.stars&gt;1 draw_sprite(spr_big_star,0,view_wview/2-96,view_hview/2-48) else if global.stars=currentstar-1 star[11]=true
+    if star[3]=true and global.stars&gt;2 draw_sprite(spr_big_star,0,view_wview/2,view_hview/2-48) else if global.stars=currentstar-1 star[11]=true //Middle
+    if star[4]=true and global.stars&gt;3 draw_sprite(spr_big_star,0,view_wview/2+96,view_hview/2-48) else if global.stars=currentstar-1 star[11]=true
+    if star[5]=true and global.stars&gt;4 draw_sprite(spr_big_star,0,view_wview/2+192,view_hview/2-48) else if global.stars=currentstar-1 star[11]=true
+    if star[6]=true and global.stars&gt;5 draw_sprite(spr_big_star,0,view_wview/2-192,view_hview/2+48) else if global.stars=currentstar-1 star[11]=true
+    if star[7]=true and global.stars&gt;6 draw_sprite(spr_big_star,0,view_wview/2-96,view_hview/2+48) else if global.stars=currentstar-1 star[11]=true
+    if star[8]=true and global.stars&gt;7 draw_sprite(spr_big_star,0,view_wview/2,view_hview/2+48) else if global.stars=currentstar-1 star[11]=true //Middle
+    if star[9]=true and global.stars&gt;8 draw_sprite(spr_big_star,0,view_wview/2+96,view_hview/2+48) else if global.stars=currentstar-1 star[11]=true
+    if star[10]=true and global.stars&gt;9 draw_sprite(spr_big_star,0,view_wview/2+192,view_hview/2+48) else if global.stars=currentstar-1 star[11]=true
 }
 
 draw_set_halign(fa_center)
-if star[11]=true draw_text(view_wview/2,view_hview/2+64+32,"You collected "+string(global.stars)+" stars out of 10!")
-
+if star[11]=true
+{
+if global.stars=0 {draw_text(view_wview/2,view_hview/2+64+32,"Oh no! You didn't collect any stars!")} else
+if global.stars=10 {draw_text(view_wview/2,view_hview/2+64+32,"Congratulations! You collects all of the stars!")} else
+{draw_text(view_wview/2,view_hview/2+64+32,"Great Job! You collected "+string(global.stars)+" stars out of 10!")}
+}
 </string>
           </argument>
         </arguments>

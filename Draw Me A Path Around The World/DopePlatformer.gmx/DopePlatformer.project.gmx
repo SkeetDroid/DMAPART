@@ -8,6 +8,7 @@
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_block</sprite>
+    <sprite>sprites\spr_breakable_block</sprite>
     <sprite>sprites\spr_light</sprite>
     <sprite>sprites\spr_light_circle</sprite>
     <sprite>sprites\spr_light_spot</sprite>
@@ -67,6 +68,7 @@
     <sprite>sprites\spr_drone_small</sprite>
     <sprite>sprites\spr_drone_big</sprite>
     <sprite>sprites\spr_star</sprite>
+    <sprite>sprites\spr_big_star</sprite>
     <sprite>sprites\spr_eraser</sprite>
     <sprite>sprites\spr_enabled</sprite>
     <sprite>sprites\spr_teleporter</sprite>
@@ -75,6 +77,7 @@
     <sprite>sprites\spr_cloud</sprite>
     <sprite>sprites\spr_fade</sprite>
     <sprite>sprites\spr_level_complete</sprite>
+    <sprite>sprites\spr_dot</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background</background>
@@ -139,6 +142,7 @@
     <object>objects\obj_lava</object>
     <object>objects\obj_secret</object>
     <object>objects\obj_rock</object>
+    <object>objects\obj_breakable_block</object>
     <object>objects\obj_ice</object>
     <object>objects\obj_player</object>
     <object>objects\obj_key</object>
@@ -157,6 +161,7 @@
       <object>objects\obj_blue_lock_fall</object>
       <object>objects\obj_rock_fall</object>
       <object>objects\obj_ice_fall</object>
+      <object>objects\obj_breakable_block_fall</object>
       <object>objects\obj_drone_fall</object>
       <object>objects\obj_super_drone_fall</object>
       <object>objects\obj_player_fall</object>
