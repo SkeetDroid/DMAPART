@@ -125,7 +125,7 @@ path_start(path_cloud_idle,0.1,2,false)
             <kind>1</kind>
             <string>if instance_number(obj_room_changer)=0 {
     room_changer=instance_create(0,0,obj_room_changer)
-    room_changer.room_id=room_next(room)
+    room_changer.room_id=end_level_menu
 }
 </string>
           </argument>
