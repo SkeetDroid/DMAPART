@@ -45,6 +45,8 @@ showstars=false
 
 if global.stars=0
 star[11]=true
+
+instance_create(x,y,obj_fade_in)
 </string>
           </argument>
         </arguments>

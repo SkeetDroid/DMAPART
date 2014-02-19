@@ -1,3 +1,7 @@
+if obj_end_cloud.hit=false {
+
+
+
 if(!onGround){ // if player is not (!) on the ground then apply gravity
     if leadboots=true
     vsp += G*4;
@@ -79,4 +83,9 @@ if(place_meeting(x, y + 1, obj_platform)){ platform=instance_nearest(x,y,obj_pla
     if(platform.isMoving = true){
         hsp = platform.hsp + hsp;   
     }
+}
+
+}
+else {
+canmove=false
 }

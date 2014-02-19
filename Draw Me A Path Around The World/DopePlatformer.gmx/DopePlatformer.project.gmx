@@ -75,6 +75,7 @@
     <sprite>sprites\spr_blue_teleporter</sprite>
     <sprite>sprites\spr_grey_teleporter</sprite>
     <sprite>sprites\spr_cloud</sprite>
+    <sprite>sprites\spr_end_cloud</sprite>
     <sprite>sprites\spr_fade</sprite>
     <sprite>sprites\spr_level_complete</sprite>
     <sprite>sprites\spr_dot</sprite>
@@ -178,6 +179,7 @@
     <object>objects\obj_fade_in</object>
     <object>objects\obj_menu_camera</object>
     <object>objects\obj_level_complete</object>
+    <object>objects\obj_start_cloud</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\mock_lv</room>

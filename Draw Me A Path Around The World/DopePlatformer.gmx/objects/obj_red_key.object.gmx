@@ -84,6 +84,12 @@ if collected=true { //Move toward player
     if unlocking=false {
     x=collector.x-4
     y=collector.y-16
+    if collector.canmove=false {
+    visible=false
+    }
+    else {
+    visible=true
+    }
     image_angle=-collector.hsp*11+270
     }
     

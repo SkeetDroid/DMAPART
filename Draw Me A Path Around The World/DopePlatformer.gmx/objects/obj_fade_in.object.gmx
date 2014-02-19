@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-9999999</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>alarm[0]=60
-fade=60
+fade=1
 </string>
           </argument>
         </arguments>
@@ -95,7 +95,7 @@ fade=60
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(spr_fade,0,0,0,view_wview,view_hview,0,c_black,fade)
+            <string>draw_sprite_ext(spr_fade,0,0,0,view_wview,view_hview,0,c_white,fade)
 </string>
           </argument>
         </arguments>
