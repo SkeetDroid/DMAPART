@@ -182,9 +182,12 @@
     <object>objects\obj_start_cloud</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\mock_lv</room>
+    <rooms name="Indev Levels">
+      <room>rooms\indev_lv2</room>
+      <room>rooms\indev_lv1</room>
+    </rooms>
     <room>rooms\end_level_menu</room>
-    <room>rooms\test</room>
+    <room>rooms\BLANK_ROOM</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
