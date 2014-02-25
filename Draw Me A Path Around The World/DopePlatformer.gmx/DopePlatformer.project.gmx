@@ -85,6 +85,7 @@
     <background>background\spr_worksheet</background>
     <background>background\back_africa_tiles</background>
     <background>background\back_sky</background>
+    <background>background\back_world_map</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path1</path>
@@ -101,6 +102,7 @@
     <script>scripts\handle_input.gml</script>
     <script>scripts\handle_items.gml</script>
     <script>scripts\handle_animation.gml</script>
+    <script>scripts\smart_items.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\BITFONT</font>
@@ -180,13 +182,17 @@
     <object>objects\obj_menu_camera</object>
     <object>objects\obj_level_complete</object>
     <object>objects\obj_start_cloud</object>
+    <object>objects\obj_level_dot</object>
+    <object>objects\obj_map_select_camera</object>
+    <object>objects\obj_voodoo_ind</object>
   </objects>
   <rooms name="rooms">
     <rooms name="Indev Levels">
-      <room>rooms\indev_lv3</room>
       <room>rooms\indev_lv2</room>
+      <room>rooms\indev_lv3</room>
       <room>rooms\indev_lv1</room>
     </rooms>
+    <room>rooms\level_select</room>
     <room>rooms\end_level_menu</room>
     <room>rooms\BLANK_ROOM</room>
   </rooms>

@@ -19,7 +19,7 @@ if (gamepad_button_check_pressed(controllerIndex,gp_shoulderl)) { //Change Heldi
         }
     }
     
-if (keyboard_check_pressed(item_use_key) or gamepad_button_check_pressed(controllerIndex,gp_shoulderlb)) { //Use Item
+if (keyboard_check_pressed(item_use_key) or gamepad_button_check_pressed(controllerIndex,gp_shoulderlb) or gamepad_button_check_pressed(controllerIndex,gp_shoulderrb)) { //Use Item
     if helditem=1 { //Leadboots
         if leadboots=false
         leadboots=true
@@ -59,7 +59,7 @@ else {
     image_yscale=1
     }
     
-if gamepad_button_check_released(controllerIndex,gp_shoulderlb) or keyboard_check_released(item_use_key) {//Throw item
+if gamepad_button_check_released(controllerIndex,gp_shoulderlb) or gamepad_button_check_released(controllerIndex,gp_shoulderrb) or keyboard_check_released(item_use_key) {//Throw item
     if aiming=true {
     if helditem=4 {//Throw Bomb
         bomb=instance_create(x,y-32,obj_bomb)
@@ -76,7 +76,7 @@ if gamepad_button_check_released(controllerIndex,gp_shoulderlb) or keyboard_chec
     }
 }
     
-if gamepad_button_check(controllerIndex,gp_shoulderlb) or keyboard_check(item_use_key) if aiming=true { //Fire
+if gamepad_button_check(controllerIndex,gp_shoulderlb) or gamepad_button_check(controllerIndex,gp_shoulderrb) or keyboard_check(item_use_key) if aiming=true { //Fire
     if gamepad_axis_value(controllerIndex,gp_axisrh)>0.4 or gamepad_axis_value(controllerIndex,gp_axisrh)<-0.4 
         or gamepad_axis_value(controllerIndex,gp_axisrv)>0.4 or gamepad_axis_value(controllerIndex,gp_axisrv)<-0.4 
         or global.gamepad = false{
@@ -89,7 +89,7 @@ if gamepad_button_check(controllerIndex,gp_shoulderlb) or keyboard_check(item_us
             }
         }
     
-if gamepad_button_check(controllerIndex,gp_shoulderlb) or keyboard_check(item_use_key) { //Enable aiming
+if gamepad_button_check(controllerIndex,gp_shoulderlb) or gamepad_button_check(controllerIndex,gp_shoulderrb) or keyboard_check(item_use_key) { //Enable aiming
     if helditem=4 or helditem=5 or helditem=6 {
         if gamepad_axis_value(controllerIndex,gp_axisrh)<0.4 or gamepad_axis_value(controllerIndex,gp_axisrh)>-0.4 or global.gamepad=false {
             if gamepad_axis_value(controllerIndex,gp_axisrv)<0.4 or gamepad_axis_value(controllerIndex,gp_axisrv)>-0.4 or global.gamepad=false {
@@ -127,6 +127,9 @@ if leadboots=false and place_meeting(x,y,obj_lava) {
     }
 
 
+if keyboard_check_pressed(ord("R")) or gamepad_button_check_pressed(controllerIndex,gp_face3) { //SMART ITEMS! AUTMATICALLY SELECTS THE CORRECT ITEM FOR THE ENVIRONMENT!
+smart_items()
+}
 
 
 

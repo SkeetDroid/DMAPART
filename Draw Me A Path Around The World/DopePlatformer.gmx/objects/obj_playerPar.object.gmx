@@ -319,7 +319,14 @@ mouse_check_button(mb_left)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>y-=1
+            <string>vCollide = instance_place(x+4,y,obj_blockPar)
+if place_meeting(x,y,vCollide) and vCollide.object_index=obj_drawing  {
+    y-=1
+    }
+else {
+    show_debug_message("The object index that stopped me: "+string(vCollide.object_index))
+    with (other) instance_destroy()
+    }
 </string>
           </argument>
         </arguments>

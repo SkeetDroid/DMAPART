@@ -80,7 +80,7 @@ if gamepad_axis_value(0,gp_axisrh)&gt;0.4 || gamepad_axis_value(0,gp_axisrh)&lt;
         y+=gamepad_axis_value(0,gp_axisrv)*6
         hspeed=0
         vspeed=0
-        instance_create(x,y,obj_drawing)
+        if obj_player1.canmove=true instance_create(x,y,obj_drawing)
         }
     }
 else if visible=false{
