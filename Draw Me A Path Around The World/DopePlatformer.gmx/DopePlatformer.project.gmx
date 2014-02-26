@@ -79,6 +79,16 @@
     <sprite>sprites\spr_fade</sprite>
     <sprite>sprites\spr_level_complete</sprite>
     <sprite>sprites\spr_dot</sprite>
+    <sprite>sprites\spr_button</sprite>
+    <sprites name="Controller Buttons">
+      <sprites name="Xbox Controller">
+        <sprite>sprites\spr_button_blank</sprite>
+        <sprite>sprites\spr_button_a</sprite>
+        <sprite>sprites\spr_button_b</sprite>
+        <sprite>sprites\spr_button_y</sprite>
+        <sprite>sprites\spr_button_x</sprite>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background</background>
@@ -185,11 +195,12 @@
     <object>objects\obj_level_dot</object>
     <object>objects\obj_map_select_camera</object>
     <object>objects\obj_voodoo_ind</object>
+    <object>objects\obj_button_par</object>
   </objects>
   <rooms name="rooms">
     <rooms name="Indev Levels">
-      <room>rooms\indev_lv2</room>
       <room>rooms\indev_lv3</room>
+      <room>rooms\indev_lv2</room>
       <room>rooms\indev_lv1</room>
     </rooms>
     <room>rooms\level_select</room>

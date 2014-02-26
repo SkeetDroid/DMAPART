@@ -73,6 +73,12 @@ show_debug_message(string(gamepad_is_connected(1)));
 show_debug_message(string(gamepad_is_connected(2)));
 show_debug_message(string(gamepad_is_connected(3)));
 show_debug_message(string(gamepad_is_connected(4)));
+
+//Level Checker
+
+if instance_number(obj_star)!=10 {show_message("THIS LEVEL HAS THE INCORRECT AMOUNT OF STARS")}
+if instance_number(obj_end_cloud)!=1 {show_message("THIS LEVEL HAS TO MANY OR NO END CLOUDS")}
+if instance_number(obj_controller)!=1 {show_message("THIS LEVEL HAS TO MANY OR NO CONTROLLERS")}
 </string>
           </argument>
         </arguments>

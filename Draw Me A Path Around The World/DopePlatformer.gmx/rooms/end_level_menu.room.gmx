@@ -4,7 +4,7 @@
   <width>1920</width>
   <height>1080</height>
   <vsnap>255</vsnap>
-  <hsnap>480</hsnap>
+  <hsnap>240</hsnap>
   <isometric>0</isometric>
   <speed>30</speed>
   <persistent>0</persistent>
@@ -53,6 +53,8 @@
     <instance objName="obj_menu_camera" x="960" y="510" name="inst_F41BAB37" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_level_complete" x="960" y="255" name="inst_666BA3E2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_controller" x="0" y="0" name="inst_7DA4759B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_button_par" x="1200" y="765" name="inst_4743C719" locked="0" code="button=2&#xA;text=&quot;Replay Level&quot;&#xA;active=false&#xA;goto_room=global.lastroom" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_button_par" x="720" y="765" name="inst_4A241A0C" locked="0" code="button=1&#xA;text=&quot;Level Select&quot;&#xA;active=false" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

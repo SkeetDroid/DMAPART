@@ -109,6 +109,7 @@ hudbubble[8]=spr_lead_boots
 global.gamepad=false
 global.particles=true
 global.stars=0
+global.lastroom=1
 </string>
           </argument>
         </arguments>

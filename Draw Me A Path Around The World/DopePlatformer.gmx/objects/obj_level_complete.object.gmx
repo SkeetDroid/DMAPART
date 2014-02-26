@@ -43,10 +43,16 @@ alarm[0]=30
 
 showstars=false
 
-if global.stars=0
+if global.stars&gt;10 {
+global.stars=-1
+}
+
+if global.stars=0 or global.stars=-1
 star[11]=true
 
 instance_create(x,y,obj_fade_in)
+
+
 </string>
           </argument>
         </arguments>
@@ -126,6 +132,8 @@ if showstars=true {
 draw_set_halign(fa_center)
 if star[11]=true
 {
+obj_button_par.active=true
+if global.stars=-1 {draw_text(view_wview/2,view_hview/2+64+32,"Hacking/Cheating/Bug Abusing is not allowed.")} else
 if global.stars=0 {draw_text(view_wview/2,view_hview/2+64+32,"Oh no! You didn't collect any stars!")} else
 if global.stars=10 {draw_text(view_wview/2,view_hview/2+64+32,"Congratulations! You collects all of the stars!")} else
 {draw_text(view_wview/2,view_hview/2+64+32,"Great Job! You collected "+string(global.stars)+" stars out of 10!")}
