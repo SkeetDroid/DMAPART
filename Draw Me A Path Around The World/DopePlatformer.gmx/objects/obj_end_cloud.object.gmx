@@ -72,6 +72,9 @@ path_start(path_cloud_idle,0.1,2,false)
     obj_playerPar.visible=false
     obj_playerPar.canbehit=false
     obj_playerPar.onfire=false
+    if instance_number(obj_drawing)&gt;0 {
+    obj_drawing.image_alpha-=0.06
+    }
 }
 </string>
           </argument>

@@ -116,6 +116,10 @@ move_towards_point(portal.x,portal.y,4)
 }
 
 timer+=1
+
+if image_alpha&lt;0 {
+    instance_destroy()
+}
 </string>
           </argument>
         </arguments>
@@ -230,7 +234,7 @@ timer+=1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if timer&gt;600 instance_destroy()
+            <string>if timer&gt;60*60 instance_destroy()
 </string>
           </argument>
         </arguments>
@@ -254,8 +258,8 @@ timer+=1
           <argument>
             <kind>1</kind>
             <string>draw_self()
-draw_sprite_ext(spr_drawing,0,x,y,image_yscale,image_yscale,0,c_white,1)
-draw_sprite_ext(spr_drawing,0,lengthdir_x(image_xscale/5,image_angle),lengthdir_y(image_xscale/5,image_angle),image_yscale,image_yscale,0,c_white,1)
+draw_sprite_ext(spr_drawing,0,x,y,image_yscale,image_yscale,0,c_white,image_alpha)
+draw_sprite_ext(spr_drawing,0,lengthdir_x(image_xscale/5,image_angle),lengthdir_y(image_xscale/5,image_angle),image_yscale,image_yscale,0,c_white,image_alpha)
 </string>
           </argument>
         </arguments>

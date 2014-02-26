@@ -157,7 +157,6 @@
     <object>objects\obj_rock</object>
     <object>objects\obj_breakable_block</object>
     <object>objects\obj_ice</object>
-    <object>objects\obj_player</object>
     <object>objects\obj_key</object>
     <object>objects\obj_red_key</object>
     <object>objects\obj_blue_key</object>
@@ -179,8 +178,9 @@
       <object>objects\obj_super_drone_fall</object>
       <object>objects\obj_player_fall</object>
       <object>objects\obj_star_fall</object>
+      <object>objects\obj_camera</object>
+      <object>objects\obj_player</object>
     </objects>
-    <object>objects\obj_camera</object>
     <object>objects\obj_star</object>
     <object>objects\obj_eraser</object>
     <object>objects\obj_red_teleporter</object>
@@ -199,9 +199,9 @@
   </objects>
   <rooms name="rooms">
     <rooms name="Indev Levels">
+      <room>rooms\indev_lv1</room>
       <room>rooms\indev_lv3</room>
       <room>rooms\indev_lv2</room>
-      <room>rooms\indev_lv1</room>
     </rooms>
     <room>rooms\level_select</room>
     <room>rooms\end_level_menu</room>
