@@ -34,6 +34,7 @@
     <sprite>sprites\spr_fireball</sprite>
     <sprite>sprites\spr_explosion</sprite>
     <sprite>sprites\spr_drew</sprite>
+    <sprite>sprites\spr_old_drew</sprite>
     <sprite>sprites\spr_drew2</sprite>
     <sprite>sprites\spr_drew3</sprite>
     <sprite>sprites\spr_drew4</sprite>
@@ -44,7 +45,6 @@
     <sprite>sprites\spr_secret</sprite>
     <sprite>sprites\spr_rock_block</sprite>
     <sprite>sprites\spr_ice_shard</sprite>
-    <sprite>sprites\sprite31</sprite>
     <sprite>sprites\spr_test_HUD</sprite>
     <sprite>sprites\spr_hp_circle</sprite>
     <sprite>sprites\spr_lead_boots</sprite>
@@ -88,6 +88,12 @@
         <sprite>sprites\spr_button_y</sprite>
         <sprite>sprites\spr_button_x</sprite>
       </sprites>
+    </sprites>
+    <sprites name="Draw Sprites">
+      <sprite>sprites\spr_drew_normal</sprite>
+      <sprite>sprites\spr_drew_dead</sprite>
+      <sprite>sprites\spr_drew_hit</sprite>
+      <sprite>sprites\spr_drew_blink</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
