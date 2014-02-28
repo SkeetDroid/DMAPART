@@ -144,7 +144,19 @@ if instance_number(obj_player1)=1 {
     if obj_player1.helditem=2 and obj_player1.hourglass=true draw_sprite_ext(spr_enabled,0,view_wview/2-64+40,1+8,1,1,0,c_white,1)
     if obj_player1.helditem=3 and obj_player1.voodoo=true draw_sprite_ext(spr_enabled,0,view_wview/2-64+40,1+8,1,1,0,c_white,1)
     draw_set_halign(fa_center)
-    draw_text(view_wview/2,64,string(global.stars)+"/10")
+    if global.stars&gt;0 draw_sprite(spr_star,0,view_wview/2-82,18)
+    if global.stars&gt;1 draw_sprite(spr_star,0,view_wview/2+82,18)
+    if global.stars&gt;2 draw_sprite(spr_star,0,view_wview/2-82-32,18)
+    if global.stars&gt;3 draw_sprite(spr_star,0,view_wview/2+82+32,18)
+    if global.stars&gt;4 draw_sprite(spr_star,0,view_wview/2-82-32*2,18)
+    if global.stars&gt;5 draw_sprite(spr_star,0,view_wview/2+82+32*2,18)
+    if global.stars&gt;6 draw_sprite(spr_star,0,view_wview/2-82-32*3,18)
+    if global.stars&gt;7 draw_sprite(spr_star,0,view_wview/2+82+32*3,18)
+    if global.stars&gt;8 draw_sprite(spr_star,0,view_wview/2-82-32*4,18)
+    if global.stars&gt;9 draw_sprite(spr_star,0,view_wview/2+82+32*4,18)
+    if instance_number(obj_red_key)&gt;0 if obj_red_key.collected=true draw_sprite(spr_HUD_key_red,0,view_wview/2,64+18)
+    if instance_number(obj_key)&gt;0 if obj_key.collected=true draw_sprite(spr_HUD_key_grey,0,view_wview/2-32,64+18)
+    if instance_number(obj_blue_key)&gt;0 if obj_blue_key.collected=true draw_sprite(spr_HUD_key_blue,0,view_wview/2+32,64+18)
 }
 
 </string>

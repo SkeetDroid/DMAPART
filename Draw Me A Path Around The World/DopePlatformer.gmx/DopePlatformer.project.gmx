@@ -63,9 +63,13 @@
     <sprite>sprites\spr_half_key</sprite>
     <sprite>sprites\spr_red_half_key</sprite>
     <sprite>sprites\spr_blue_half_key</sprite>
+    <sprite>sprites\spr_HUD_key_grey</sprite>
+    <sprite>sprites\spr_HUD_key_red</sprite>
+    <sprite>sprites\spr_HUD_key_blue</sprite>
     <sprite>sprites\spr_camera</sprite>
     <sprite>sprites\spr_drawing_filler</sprite>
     <sprite>sprites\spr_drone_small</sprite>
+    <sprite>sprites\spr_drone_small_mouth_open</sprite>
     <sprite>sprites\spr_drone_big</sprite>
     <sprite>sprites\spr_star</sprite>
     <sprite>sprites\spr_big_star</sprite>

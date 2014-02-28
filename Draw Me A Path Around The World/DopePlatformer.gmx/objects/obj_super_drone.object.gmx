@@ -3,7 +3,7 @@
   <spriteName>spr_drone_big</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1</depth>
   <persistent>0</persistent>
   <parentName>obj_enemyPar</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -28,7 +28,7 @@
             <string>hsp = 0;
 isMoving = true;
 right = true;
-hp = 80;
+hp = 40;
 movespeed=floor(random(2))+1
 </string>
           </argument>
@@ -245,7 +245,7 @@ alarm[0]=2
           <argument>
             <kind>1</kind>
             <string>draw_self()
-draw_healthbar(x-32,y-21-1-16,x+32,y-17-1-16,hp*(100/80),c_red,c_green,c_green,0,true,false)
+draw_healthbar(x-32,y-21-1-16,x+32,y-17-1-16,hp*(100/40),c_red,c_green,c_green,0,true,false)
 </string>
           </argument>
         </arguments>
