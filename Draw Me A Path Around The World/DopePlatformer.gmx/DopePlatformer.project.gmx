@@ -209,9 +209,9 @@
   </objects>
   <rooms name="rooms">
     <rooms name="Indev Levels">
-      <room>rooms\indev_lv1</room>
       <room>rooms\indev_lv3</room>
       <room>rooms\indev_lv2</room>
+      <room>rooms\indev_lv1</room>
     </rooms>
     <room>rooms\level_select</room>
     <room>rooms\end_level_menu</room>

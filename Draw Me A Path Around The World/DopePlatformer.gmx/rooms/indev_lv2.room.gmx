@@ -3,8 +3,8 @@
   <caption></caption>
   <width>3840</width>
   <height>1920</height>
-  <vsnap>16</vsnap>
-  <hsnap>16</hsnap>
+  <vsnap>32</vsnap>
+  <hsnap>32</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -463,9 +463,6 @@
     <tile bgName="back_africa_tiles" x="672" y="800" w="32" h="32" xo="64" yo="32" id="10002628" name="inst_D16A29D0" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="back_africa_tiles" x="640" y="800" w="32" h="32" xo="64" yo="32" id="10002629" name="inst_40E9AF34" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="back_africa_tiles" x="704" y="896" w="32" h="32" xo="64" yo="0" id="10002632" name="inst_94A2FB3A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="back_africa_tiles" x="672" y="896" w="32" h="32" xo="64" yo="0" id="10002633" name="inst_D8E89B37" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="back_africa_tiles" x="640" y="896" w="32" h="32" xo="64" yo="0" id="10002634" name="inst_238437F0" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="back_africa_tiles" x="608" y="896" w="32" h="32" xo="64" yo="0" id="10002635" name="inst_DE484113" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="back_africa_tiles" x="576" y="896" w="32" h="32" xo="64" yo="0" id="10002638" name="inst_4586EFD4" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="back_africa_tiles" x="544" y="896" w="32" h="32" xo="64" yo="0" id="10002639" name="inst_8A2813A8" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="back_africa_tiles" x="512" y="896" w="32" h="32" xo="64" yo="0" id="10002640" name="inst_120767B5" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -1520,6 +1517,9 @@
     <tile bgName="back_africa_tiles" x="1120" y="352" w="32" h="32" xo="96" yo="64" id="10004134" name="inst_71B25A9F" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="back_africa_tiles" x="1248" y="704" w="32" h="32" xo="128" yo="96" id="10004135" name="inst_F55A5F05" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="back_africa_tiles" x="1120" y="704" w="32" h="32" xo="96" yo="96" id="10004138" name="inst_BDEDA02F" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="608" y="896" w="32" h="32" xo="96" yo="128" id="10006412" name="inst_9EA8CD84" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="640" y="896" w="32" h="32" xo="96" yo="128" id="10006413" name="inst_48F7D2F9" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="back_africa_tiles" x="672" y="896" w="32" h="32" xo="96" yo="128" id="10006414" name="inst_FD9E8703" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>
