@@ -29,6 +29,7 @@
 isMoving = true;
 right = true;
 hp = 10;
+starthp = 10
 movespeed=floor(random(5))+1
 inCombat=false
 
@@ -239,6 +240,7 @@ x+=hsp
 if(hp &lt;= 0){
     instance_create(x,y,obj_explosion)
     body=instance_create(x,y,obj_drone_fall)
+    body.sprite_index=default_sprite
     body.image_xscale=image_xscale
     instance_destroy();
 }
@@ -258,6 +260,9 @@ if distance_to_object(target)&lt;32 {
     with (target) instance_destroy()
     }
 }
+else {
+    sprite_index=default_sprite
+}
 
 if frozen=true {
     image_blend=c_aqua
@@ -270,6 +275,14 @@ if frozen=true {
     }
 else {
     image_blend=c_white
+    if place_meeting(x,y,obj_ice) {
+        ice=instance_nearest(x,y,obj_ice)
+        with (ice) instance_destroy()
+        fall_ice=instance_create(x-sprite_width/2,y-sprite_height/2,obj_ice_fall)
+        fall_ice.image_xscale=sprite_width/32
+        fall_ice.image_yscale=sprite_height/32
+        fall_ice.image_alpha=0.75
+        }
     }
 </string>
           </argument>
@@ -366,6 +379,11 @@ alarm[1]=60
 
 burnt=true
 alarm[3]=60*3
+
+if frozen=true {
+frozen=false
+hp-=5
+}
 </string>
           </argument>
         </arguments>
@@ -412,8 +430,7 @@ alarm[3]=60*3
           <argument>
             <kind>1</kind>
             <string>draw_self()
-if inCombat=true draw_healthbar(x-16,y-21-1,x+16,y-17-1,hp*10,c_red,c_green,c_green,0,true,false)
-
+if inCombat=true draw_healthbar(x-sprite_width/2*image_xscale,y-sprite_height/2-6,x+sprite_width/2*image_xscale,y-sprite_height/2-2,hp/starthp*100,c_red,c_green,c_green,0,true,false)
 </string>
           </argument>
         </arguments>
