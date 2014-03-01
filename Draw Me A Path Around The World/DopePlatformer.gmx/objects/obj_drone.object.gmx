@@ -35,7 +35,99 @@ inCombat=false
 default_sprite=spr_drone_small
 mouth_open=spr_drone_small_mouth_open
 
+burnt=false
+frozen=false
 
+alarm[4]=20
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if burnt=true {
+hp-=0.2
+image_blend=c_red
+effect_create_below(ef_smokeup,x,y,0,c_red)
+effect_create_below(ef_smokeup,x,y,0,c_orange)
+
+inCombat=true
+
+if frozen=true 
+frozen=false
+}
+
+alarm[4]=20
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>burnt=false
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>frozen=false
+x=floor(x)
+y=floor(y)
+ice=instance_nearest(x,y,obj_ice)
+with (ice) instance_destroy()
+fall_ice=instance_create(x-sprite_width/2,y-sprite_height/2,obj_ice_fall)
+fall_ice.image_xscale=sprite_width/32
+fall_ice.image_yscale=sprite_height/32
+fall_ice.image_alpha=0.75
 </string>
           </argument>
         </arguments>
@@ -122,7 +214,7 @@ var hCollide;
 hCollide = instance_place(x + hsp, y, obj_blockPar)
 if((hCollide) != noone){
     if((hCollide).type == 1) { //if colliding with type "wall"
-        if(place_meeting(x + hsp, y, obj_blockPar)){
+        if(place_meeting(x + hsp, y, obj_blockPar) and frozen=false){
             //make it turn around
             if(right = true)
                 right = false;
@@ -137,10 +229,11 @@ if(right)
 else
     {hsp = movespeed image_xscale=1}
 
-if obj_playerPar.hourglass=false
-x+=hsp;
-else
+
+if obj_playerPar.hourglass=true and frozen=false
 x+=hsp/8
+else if frozen=false
+x+=hsp
 
 
 if(hp &lt;= 0){
@@ -165,6 +258,19 @@ if distance_to_object(target)&lt;32 {
     with (target) instance_destroy()
     }
 }
+
+if frozen=true {
+    image_blend=c_aqua
+    if place_meeting(x,y,obj_ice)=false {
+    ice=instance_create(x-sprite_width/2,y-sprite_height/2,obj_ice)
+    ice.image_xscale=sprite_width/32
+    ice.image_yscale=sprite_height/32
+    ice.image_alpha=0.75
+    }
+    }
+else {
+    image_blend=c_white
+    }
 </string>
           </argument>
         </arguments>
@@ -224,6 +330,9 @@ alarm[0]=2
 
 inCombat=true
 alarm[1]=60
+
+frozen=true
+alarm[2]=60*3
 </string>
           </argument>
         </arguments>
@@ -254,6 +363,9 @@ alarm[0]=2
 
 inCombat=true
 alarm[1]=60
+
+burnt=true
+alarm[3]=60*3
 </string>
           </argument>
         </arguments>
@@ -301,6 +413,7 @@ alarm[1]=60
             <kind>1</kind>
             <string>draw_self()
 if inCombat=true draw_healthbar(x-16,y-21-1,x+16,y-17-1,hp*10,c_red,c_green,c_green,0,true,false)
+
 </string>
           </argument>
         </arguments>
